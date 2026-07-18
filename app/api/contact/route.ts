@@ -56,7 +56,7 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: process.env.CONTACT_FROM_EMAIL ?? "Niiplants Group Website <onboarding@resend.dev>",
+    from: process.env.CONTACT_FROM_EMAIL ?? "Niiplants Group Website <website@niiplantsgroup.com>",
     to,
     replyTo: email,
     subject: `Website enquiry — ${companyName}`,
