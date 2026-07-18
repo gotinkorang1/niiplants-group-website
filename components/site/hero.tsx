@@ -1,8 +1,16 @@
 "use client";
 
+import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MotionConfig, motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  MotionConfig,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { Trophy } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -43,12 +51,121 @@ const float = (distance: number, duration: number, delay: number) => ({
   transition: { duration, delay, repeat: Infinity, ease: "easeInOut" as const },
 });
 
+const slides = [
+  {
+    src: "/trivoxo/event-biking.webp",
+    alt: "Trivoxo group biking tour on a ridge overlooking the valley",
+    caption: "Adventure tours · Trivoxo, part of Niiplants Group",
+  },
+  {
+    src: "/awards/ceo-receiving-award.jpg",
+    alt: "Receiving an award on stage at the National Tourism Awards",
+    caption: "Recognised at the National Tourism Awards",
+  },
+  {
+    src: "/trivoxo/event-hiking.webp",
+    alt: "Trivoxo hiking event — group celebrating on a hillside trail",
+    caption: "Group experiences across Ghana",
+  },
+];
+
+const SLIDE_INTERVAL_MS = 5000;
+
+/**
+ * Crossfading slideshow with a slow Ken Burns drift, dot controls, and
+ * pause-on-hover. Auto-advance is skipped for reduced-motion users.
+ */
+function HeroSlideshow({ aspect }: { aspect: string }) {
+  const shouldReduceMotion = useReducedMotion();
+  const [index, setIndex] = React.useState(0);
+  const [paused, setPaused] = React.useState(false);
+
+  React.useEffect(() => {
+    if (shouldReduceMotion || paused) return;
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % slides.length),
+      SLIDE_INTERVAL_MS,
+    );
+    return () => window.clearInterval(id);
+  }, [shouldReduceMotion, paused]);
+
+  const slide = slides[index];
+
+  return (
+    <div
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      className="relative"
+    >
+      <div className={`relative w-full overflow-hidden ${aspect}`}>
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={slide.src}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <motion.div
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.07 }}
+              transition={{ duration: SLIDE_INTERVAL_MS / 1000 + 1.5, ease: "linear" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={index === 0}
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Caption */}
+        <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink-900/85 to-transparent px-5 pb-10 pt-12">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p
+              key={slide.caption}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.4 }}
+              className="text-sm text-paper-0/90"
+            >
+              {slide.caption}
+            </motion.p>
+          </AnimatePresence>
+        </div>
+
+        {/* Dot controls */}
+        <div className="absolute bottom-3.5 left-5 z-20 flex gap-2">
+          {slides.map((s, i) => (
+            <button
+              key={s.src}
+              type="button"
+              aria-label={`Show slide ${i + 1} of ${slides.length}`}
+              aria-current={i === index}
+              onClick={() => setIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === index ? "w-6 bg-accent-500" : "w-2.5 bg-paper-0/40 hover:bg-paper-0/70"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
   // Subtle scroll parallax — cards drift at different rates as you scroll away.
   const slow = useTransform(scrollY, [0, 600], [0, -30]);
-  const fast = useTransform(scrollY, [0, 600], [0, -60]);
 
   return (
     <MotionConfig reducedMotion="user">
@@ -116,121 +233,51 @@ export function Hero() {
               </motion.p>
             </div>
 
-            {/* Photo collage — desktop */}
-            <div className="relative hidden lg:col-span-5 lg:block" aria-hidden="false">
-              <div className="relative aspect-[4/5] w-full">
-                {/* Decorative ring */}
-                <motion.span
-                  {...stagger(4)}
-                  suppressHydrationWarning
-                  className="absolute -right-6 top-4 size-36 rounded-full border border-accent-500/30"
-                  aria-hidden="true"
-                />
+            {/* Hero photo — one large card, desktop */}
+            <div className="relative hidden lg:col-span-5 lg:block">
+              {/* Decorative ring + dots behind the card */}
+              <motion.span
+                {...stagger(5)}
+                suppressHydrationWarning
+                className="absolute -right-8 -top-8 size-40 rounded-full border border-accent-500/30"
+                aria-hidden="true"
+              />
+              <motion.span
+                {...stagger(5)}
+                suppressHydrationWarning
+                className="absolute -bottom-6 -left-6 grid grid-cols-3 gap-2"
+                aria-hidden="true"
+              >
+                {Array.from({ length: 9 }).map((_, i) => (
+                  <span key={i} className="size-1 rounded-full bg-accent-500/50" />
+                ))}
+              </motion.span>
 
-                {/* Main card */}
+              <motion.div
+                {...stagger(3)}
+                suppressHydrationWarning
+                style={shouldReduceMotion ? undefined : { y: slow }}
+                className="relative"
+              >
                 <motion.div
-                  {...stagger(3)}
-                  suppressHydrationWarning
-                  style={shouldReduceMotion ? undefined : { y: slow }}
-                  className="absolute left-0 top-8 w-[78%]"
+                  animate={float(8, 8, 0.5)}
+                  className="relative overflow-hidden rounded-lg border border-paper-0/15 shadow-floating"
                 >
-                  <motion.figure
-                    animate={float(8, 7, 0)}
-                    className="relative overflow-hidden rounded-lg border border-paper-0/15 shadow-floating rotate-[-2deg]"
-                  >
-                    <Image
-                      src="/trivoxo/event-biking.webp"
-                      alt="Trivoxo group biking tour on a ridge overlooking the valley"
-                      width={700}
-                      height={327}
-                      priority
-                      className="w-full object-cover"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-900/85 to-transparent px-4 pb-3 pt-8 text-sm text-paper-0/90">
-                      Adventure tours · Trivoxo
-                    </figcaption>
-                  </motion.figure>
+                  <HeroSlideshow aspect="aspect-[4/5]" />
                 </motion.div>
-
-                {/* Secondary card */}
-                <motion.div
-                  {...stagger(4)}
-                  suppressHydrationWarning
-                  style={shouldReduceMotion ? undefined : { y: fast }}
-                  className="absolute bottom-14 right-0 w-[58%]"
-                >
-                  <motion.figure
-                    animate={float(10, 8.5, 0.6)}
-                    className="relative overflow-hidden rounded-lg border border-paper-0/15 shadow-floating rotate-[2.5deg]"
-                  >
-                    <Image
-                      src="/awards/ceo-receiving-award.jpg"
-                      alt="Receiving an award on stage at the National Tourism Awards"
-                      width={520}
-                      height={347}
-                      priority
-                      className="w-full object-cover"
-                    />
-                    <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-900/85 to-transparent px-4 pb-3 pt-8 text-sm text-paper-0/90">
-                      National Tourism Awards
-                    </figcaption>
-                  </motion.figure>
-                </motion.div>
-
-                {/* Third card */}
-                <motion.div
-                  {...stagger(5)}
-                  suppressHydrationWarning
-                  style={shouldReduceMotion ? undefined : { y: slow }}
-                  className="absolute bottom-0 left-6 w-[42%]"
-                >
-                  <motion.figure
-                    animate={float(6, 6, 1.1)}
-                    className="relative overflow-hidden rounded-lg border border-paper-0/15 shadow-floating rotate-[-3deg]"
-                  >
-                    <Image
-                      src="/trivoxo/event-hiking.webp"
-                      alt="Trivoxo hiking event — group celebrating on a hillside trail"
-                      width={420}
-                      height={280}
-                      className="w-full object-cover"
-                    />
-                  </motion.figure>
-                </motion.div>
-
-                {/* Gold dots accent */}
-                <motion.span
-                  {...stagger(5)}
-                  suppressHydrationWarning
-                  className="absolute -left-4 top-1/2 grid grid-cols-3 gap-2"
-                  aria-hidden="true"
-                >
-                  {Array.from({ length: 9 }).map((_, i) => (
-                    <span key={i} className="size-1 rounded-full bg-accent-500/50" />
-                  ))}
-                </motion.span>
-              </div>
+              </motion.div>
             </div>
           </div>
 
-          {/* Photo strip — mobile/tablet */}
+          {/* Hero photo — mobile/tablet */}
           <motion.div
             {...stagger(4)}
             suppressHydrationWarning
-            className="mt-10 flex gap-3 lg:hidden"
+            className="mt-10 lg:hidden"
           >
-            {[
-              { src: "/trivoxo/event-biking.webp", alt: "Trivoxo group biking tour", rotate: "-rotate-2" },
-              { src: "/awards/ceo-receiving-award.jpg", alt: "Receiving an award at the National Tourism Awards", rotate: "rotate-1" },
-              { src: "/trivoxo/event-hiking.webp", alt: "Trivoxo hiking event", rotate: "-rotate-1" },
-            ].map((photo) => (
-              <div
-                key={photo.src}
-                className={`relative h-24 flex-1 overflow-hidden rounded-md border border-paper-0/15 shadow-floating sm:h-32 ${photo.rotate}`}
-              >
-                <Image src={photo.src} alt={photo.alt} fill sizes="33vw" className="object-cover" />
-              </div>
-            ))}
+            <div className="relative overflow-hidden rounded-lg border border-paper-0/15 shadow-floating">
+              <HeroSlideshow aspect="aspect-[16/9]" />
+            </div>
           </motion.div>
 
           {/* Sector ticker — quiet proof of breadth. */}
