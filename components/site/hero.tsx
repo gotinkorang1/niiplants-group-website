@@ -55,16 +55,19 @@ const slides = [
   {
     src: "/trivoxo/event-biking.webp",
     alt: "Trivoxo group biking tour on a ridge overlooking the valley",
+    tagline: ["Journeys that", "inspire."],
     caption: "Adventure tours · Trivoxo, part of Niiplants Group",
   },
   {
     src: "/awards/ceo-receiving-award.jpg",
     alt: "Receiving an award on stage at the National Tourism Awards",
+    tagline: ["Excellence,", "recognised."],
     caption: "Recognised at the National Tourism Awards",
   },
   {
     src: "/trivoxo/event-hiking.webp",
     alt: "Trivoxo hiking event — group celebrating on a hillside trail",
+    tagline: ["One group.", "Many journeys."],
     caption: "Group experiences across Ghana",
   },
 ];
@@ -124,6 +127,37 @@ function HeroSlideshow({ aspect }: { aspect: string }) {
             </motion.div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Animated tagline — midway over the image, lines rise in from a mask. */}
+        <div
+          className="pointer-events-none absolute inset-0 z-10 flex items-center bg-gradient-to-r from-ink-900/45 via-ink-900/10 to-transparent px-6"
+          aria-hidden="true"
+        >
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.p
+              key={`tagline-${slide.src}`}
+              exit={{ opacity: 0, transition: { duration: 0.3 } }}
+              className="font-display text-h2 leading-tight text-paper-0 [text-shadow:0_2px_16px_rgba(11,18,32,0.55)]"
+            >
+              {slide.tagline.map((line, lineIndex) => (
+                <span key={line} className="block overflow-hidden">
+                  <motion.span
+                    initial={{ y: "110%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.55,
+                      ease: [0.2, 0.8, 0.2, 1],
+                      delay: 0.35 + lineIndex * 0.14,
+                    }}
+                    className={`block ${lineIndex === slide.tagline.length - 1 ? "text-gradient-gold [text-shadow:none]" : ""}`}
+                  >
+                    {line}
+                  </motion.span>
+                </span>
+              ))}
+            </motion.p>
+          </AnimatePresence>
+        </div>
 
         {/* Caption */}
         <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink-900/85 to-transparent px-5 pb-10 pt-12">

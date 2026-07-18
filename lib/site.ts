@@ -10,3 +10,11 @@ export const siteName = "Niiplants Group";
 
 export const siteDescription =
   "Niiplants Group is a diversified Ghanaian business group — eight companies across car rentals, vehicle leasing, automotive, logistics, serviced apartments, travel, food, and office supplies.";
+
+/** Official social profiles — sourced from niiplantsghana.com and the YouTube channel. */
+export const socialLinks = [
+  { name: "Facebook", href: "https://www.facebook.com/niiplants/" },
+  { name: "Instagram", href: "https://www.instagram.com/p/CaSio08s5w7/" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/nii-plants-car-rental/" },
+  { name: "YouTube", href: "https://www.youtube.com/@niiplantscarrental867" },
+];

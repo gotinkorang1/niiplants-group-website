@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
@@ -20,8 +21,14 @@ interface FormValues {
 const inputClasses =
   "w-full rounded-sm border border-line-200 bg-paper-0 px-4 py-3 text-ink-700 placeholder:text-ink-500/60 focus-visible:border-accent-700";
 
-/** Contact form with visible labels and inline (not color-only) validation — docs/06-components.md. */
-export function ContactForm({ defaultCompany = "" }: { defaultCompany?: string }) {
+/**
+ * Contact form with visible labels and inline (not color-only) validation —
+ * docs/06-components.md. Reads `?company=` / `?subject=` from the URL itself
+ * (via useSearchParams, inside a Suspense boundary) so the page stays static.
+ */
+export function ContactForm() {
+  const searchParams = useSearchParams();
+  const defaultCompany = searchParams.get("company") ?? "";
   const [status, setStatus] = React.useState<"idle" | "sending" | "sent" | "error">("idle");
   const [serverError, setServerError] = React.useState<string | null>(null);
 

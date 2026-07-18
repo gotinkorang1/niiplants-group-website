@@ -3,7 +3,21 @@ import Link from "next/link";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/site/container";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  YouTubeIcon,
+} from "@/components/site/social-icons";
 import { companies } from "@/lib/companies";
+import { socialLinks } from "@/lib/site";
+
+const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  Facebook: FacebookIcon,
+  Instagram: InstagramIcon,
+  LinkedIn: LinkedInIcon,
+  YouTube: YouTubeIcon,
+};
 
 const groupLinks = [
   { href: "/about", label: "About the Group" },
@@ -56,6 +70,24 @@ export function Footer() {
                 rental@niiplantsghana.com
               </a>
             </li>
+          </ul>
+          <ul className="mt-6 flex gap-3">
+            {socialLinks.map((social) => {
+              const Icon = socialIcons[social.name];
+              return (
+                <li key={social.name}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`Niiplants Group on ${social.name} (opens in a new tab)`}
+                    className="flex size-10 items-center justify-center rounded-full border border-paper-0/20 text-paper-0/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-500 hover:bg-accent-700 hover:text-paper-0"
+                  >
+                    {Icon && <Icon className="size-4" />}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
 

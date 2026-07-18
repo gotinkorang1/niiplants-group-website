@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/site/container";
@@ -15,13 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ company?: string }>;
-}) {
-  const { company: defaultCompany } = await searchParams;
-
+export default function ContactPage() {
   return (
     <>
       <PageHero
@@ -39,7 +34,9 @@ export default async function ContactPage({
               Tell us which company your enquiry concerns and we&apos;ll route
               it to the right people.
             </p>
-            <ContactForm defaultCompany={defaultCompany ?? ""} />
+            <Suspense fallback={null}>
+              <ContactForm />
+            </Suspense>
           </Reveal>
 
           {/* Directory */}
@@ -89,7 +86,7 @@ export default async function ContactPage({
             <Reveal className="mt-8">
               <div className="rounded-md border border-line-200 bg-paper-50 p-6 text-sm text-ink-500">
                 <p className="font-medium text-ink-900">Working hours</p>
-                <p className="mt-1">Monday – Friday, 8:00 – 17:00 (GMT)</p>
+                <p className="mt-1">Monday – Saturday, 9:00 – 17:00 (GMT) · Sunday closed</p>
                 <p className="mt-3 font-medium text-ink-900">Location</p>
                 <p className="mt-1">Dansoman, Accra, Ghana</p>
               </div>

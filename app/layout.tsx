@@ -5,17 +5,19 @@ import "./globals.css";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { companies } from "@/lib/companies";
-import { siteDescription, siteName, siteUrl } from "@/lib/site";
+import { siteDescription, siteName, siteUrl, socialLinks } from "@/lib/site";
 
 const fraunces = Fraunces({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["500", "600"],
+  display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -70,6 +72,7 @@ const organizationJsonLd = {
     addressLocality: "Dansoman, Accra",
     addressCountry: "GH",
   },
+  sameAs: socialLinks.map((social) => social.href),
   subOrganization: companies.map((company) => ({
     "@type": "Organization",
     name: company.name,
