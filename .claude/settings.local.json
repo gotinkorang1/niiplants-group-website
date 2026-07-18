@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm --disable-git)",
+      "Bash(npx --yes create-next-app@latest --help)",
+      "Bash(rm -rf /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold)",
+      "Bash(mkdir -p /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold)",
+      "Bash(npx --yes create-next-app@latest /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold --typescript --tailwind --eslint --app --no-src-dir --import-alias @/* --use-npm --disable-git --skip-install)",
+      "Bash(TMP_DIR=\"/c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold\" *)",
+      "Bash(npm view *)",
+      "Bash(cp /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold/.gitignore '/c/Users/gotin/Documents/Niiplants Group Website/.gitignore')",
+      "Bash(cp /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold/README.md '/c/Users/gotin/Documents/Niiplants Group Website/README.md')",
+      "Bash(cp /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold/eslint.config.mjs '/c/Users/gotin/Documents/Niiplants Group Website/eslint.config.mjs')",
+      "Bash(cp /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold/next-env.d.ts '/c/Users/gotin/Documents/Niiplants Group Website/next-env.d.ts')",
+      "Bash(cp /c/Users/gotin/AppData/Local/Temp/claude/C--Users-gotin-Documents-Niiplants-Group-Website/a1ff3e27-968c-4aee-a758-34af0ae9a0f9/scratchpad/scaffold/next.config.ts '/c/Users/gotin/Documents/Niiplants Group Website/next.config.ts')",
+      "Bash(xxd)",
+      "Bash(touch test2.txt)",
+      "Bash(rm test2.txt)",
+      "PowerShell($p = \"C:\\\\Users\\\\gotin\\\\Documents\\\\Niiplants Group Website\"; Test-Path $p; New-Item -Path \"$p\\\\test3.txt\" -ItemType File -Force | Out-Null; Test-Path \"$p\\\\test3.txt\"; Remove-Item \"$p\\\\test3.txt\" -Force)"
+    ]
+  }
+}
