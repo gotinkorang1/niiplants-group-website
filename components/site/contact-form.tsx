@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Script from "next/script";
 import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 
@@ -21,6 +22,59 @@ interface FormValues {
 const inputClasses =
   "w-full rounded-sm border border-line-200 bg-paper-0 px-4 py-3 text-ink-700 placeholder:text-ink-500/60 focus-visible:border-accent-700";
 
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        el: HTMLElement,
+        options: {
+          sitekey: string;
+          callback: (token: string) => void;
+          "expired-callback"?: () => void;
+          theme?: string;
+        },
+      ) => string;
+      reset: (widgetId?: string) => void;
+    };
+  }
+}
+
+/** Invisible-friendly Cloudflare Turnstile widget; renders nothing until the site key is configured. */
+function Turnstile({ onToken }: { onToken: (token: string) => void }) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const rendered = React.useRef(false);
+
+  const render = React.useCallback(() => {
+    if (!TURNSTILE_SITE_KEY || rendered.current || !ref.current || !window.turnstile) return;
+    rendered.current = true;
+    window.turnstile.render(ref.current, {
+      sitekey: TURNSTILE_SITE_KEY,
+      theme: "light",
+      callback: onToken,
+      "expired-callback": () => onToken(""),
+    });
+  }, [onToken]);
+
+  React.useEffect(() => {
+    render();
+  }, [render]);
+
+  if (!TURNSTILE_SITE_KEY) return null;
+
+  return (
+    <>
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        onLoad={render}
+        strategy="lazyOnload"
+      />
+      <div ref={ref} />
+    </>
+  );
+}
+
 /**
  * Contact form with visible labels and inline (not color-only) validation —
  * docs/06-components.md. Reads `?company=` / `?subject=` from the URL itself
@@ -31,6 +85,9 @@ export function ContactForm() {
   const defaultCompany = searchParams.get("company") ?? "";
   const [status, setStatus] = React.useState<"idle" | "sending" | "sent" | "error">("idle");
   const [serverError, setServerError] = React.useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = React.useState("");
+  /** When the form mounted — bots submit in milliseconds, humans don't. */
+  const startedAt = React.useRef(Date.now());
 
   const {
     register,
@@ -48,7 +105,11 @@ export function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          ...values,
+          elapsedMs: Date.now() - startedAt.current,
+          turnstileToken,
+        }),
       });
       if (!response.ok) {
         const data = (await response.json().catch(() => null)) as { error?: string } | null;
@@ -183,6 +244,8 @@ export function ContactForm() {
         <label htmlFor="contact-website">Website</label>
         <input id="contact-website" type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
       </div>
+
+      <Turnstile onToken={setTurnstileToken} />
 
       {status === "error" && serverError && (
         <p role="alert" className="rounded-sm border border-sector-automotive/40 bg-sector-automotive/5 px-4 py-3 text-sm text-ink-700">

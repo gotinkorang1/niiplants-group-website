@@ -16,14 +16,50 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { name, email, phone, company, message, website } = (body ?? {}) as Record<
-    string,
-    unknown
-  >;
+  const { name, email, phone, company, message, website, elapsedMs, turnstileToken } =
+    (body ?? {}) as Record<string, unknown>;
 
   // Honeypot — bots fill every field; humans never see this one.
   if (typeof website === "string" && website.trim() !== "") {
     return NextResponse.json({ ok: true });
+  }
+
+  // Timing check — humans take more than 3 seconds to fill a five-field form.
+  if (typeof elapsedMs !== "number" || elapsedMs < 3000) {
+    return NextResponse.json(
+      { error: "Please take a moment to review your message and try again." },
+      { status: 400 },
+    );
+  }
+
+  // Cloudflare Turnstile — verified server-side when configured.
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    if (typeof turnstileToken !== "string" || !turnstileToken) {
+      return NextResponse.json(
+        { error: "Please complete the human verification and try again." },
+        { status: 400 },
+      );
+    }
+    const verification = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: turnstileSecret,
+          response: turnstileToken,
+          remoteip: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+        }),
+      },
+    ).then((res) => res.json() as Promise<{ success: boolean }>);
+
+    if (!verification.success) {
+      return NextResponse.json(
+        { error: "Human verification failed. Please try again." },
+        { status: 400 },
+      );
+    }
   }
 
   if (
