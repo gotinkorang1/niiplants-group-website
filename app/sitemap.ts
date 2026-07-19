@@ -1,10 +1,13 @@
 import type { MetadataRoute } from "next";
 
 import { companies } from "@/lib/companies";
+import { getPosts } from "@/lib/sanity";
 import { siteUrl } from "@/lib/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  // Build date — accurate, since every deploy regenerates the sitemap.
+/** Refresh hourly so newly published newsroom articles join the sitemap without a redeploy. */
+export const revalidate = 3600;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -25,5 +28,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
   }));
 
-  return [...staticRoutes, ...companyRoutes];
+  // Newsroom articles — dated by their publish time.
+  const posts = await getPosts();
+  const articleRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${siteUrl}/newsroom/${post.slug}`,
+    priority: 0.6,
+    changeFrequency: "yearly",
+    lastModified: new Date(post.publishedAt),
+  }));
+
+  return [...staticRoutes, ...companyRoutes, ...articleRoutes];
 }
