@@ -29,11 +29,19 @@ export async function generateMetadata({
   return {
     title: `${data.company.name} — ${data.company.sector}`,
     description: data.company.descriptor,
+    keywords: [
+      data.company.name,
+      `${data.company.sector} Ghana`,
+      `${data.company.sector} Accra`,
+      "Niiplants Group",
+      ...data.detail.services.slice(0, 4).map((s) => `${s} Ghana`),
+    ],
     alternates: { canonical: `/companies/${slug}` },
     openGraph: {
       title: `${data.company.name} | Niiplants Group`,
       description: data.company.descriptor,
       url: `/companies/${slug}`,
+      type: "website",
     },
   };
 }

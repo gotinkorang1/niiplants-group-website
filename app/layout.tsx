@@ -50,7 +50,22 @@ export const metadata: Metadata = {
     title: "Niiplants Group",
     description: siteDescription,
   },
-  robots: { index: true, follow: true },
+  applicationName: siteName,
+  creator: siteName,
+  publisher: siteName,
+  category: "business",
+  formatDetection: { telephone: true, email: true, address: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { canonical: "/" },
 };
 
@@ -67,6 +82,10 @@ const organizationJsonLd = {
   name: siteName,
   url: siteUrl,
   description: siteDescription,
+  // Logo powers Google's knowledge panel / rich results.
+  logo: `${siteUrl}/logo/niiplants-group-light.png`,
+  award:
+    "Car Rental Service Provider of the Year 2024 — Ghana Tourism Authority, Greater Accra Regional Tourism Awards",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Dansoman, Accra",
@@ -81,6 +100,15 @@ const organizationJsonLd = {
   })),
 };
 
+/** WebSite schema — names the site for Google's sitelinks treatment. */
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  url: siteUrl,
+  publisher: { "@type": "Organization", name: siteName },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -91,7 +119,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-paper-0 text-ink-700">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, webSiteJsonLd]) }}
         />
         <a
           href="#main-content"
