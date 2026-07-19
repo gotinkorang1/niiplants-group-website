@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "res.cloudinary.com",
       },
+      {
+        // Sanity-hosted newsroom images.
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
     ],
   },
   async headers() {
