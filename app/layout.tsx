@@ -2,8 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 
 import "./globals.css";
-import { Header } from "@/components/site/header";
-import { Footer } from "@/components/site/footer";
 import { companies } from "@/lib/companies";
 import { siteDescription, siteName, siteUrl, socialLinks } from "@/lib/site";
 
@@ -121,15 +119,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, webSiteJsonLd]) }}
         />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-ink-900 focus:px-4 focus:py-2 focus:text-paper-0"
-        >
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content" className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
