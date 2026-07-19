@@ -123,10 +123,15 @@ export function Header() {
                           <li key={company.slug}>
                             <Link
                               href={`/companies/${company.slug}`}
-                              className="block text-sm text-ink-700 hover:text-accent-700"
+                              className="group block"
                               onClick={() => setCompaniesOpen(false)}
                             >
-                              {company.name}
+                              <span className="block text-sm text-ink-700 group-hover:text-accent-700">
+                                {company.name}
+                              </span>
+                              <span className="mt-0.5 block text-xs text-ink-500">
+                                {company.sector}
+                              </span>
                             </Link>
                           </li>
                         ))}

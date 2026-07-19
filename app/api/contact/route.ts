@@ -8,7 +8,34 @@ import { companies } from "@/lib/companies";
  * CONTACT_TO_EMAIL are configured; returns 503 otherwise so the client
  * can show a graceful "email us directly" fallback.
  */
+
+/** Best-effort per-IP rate limit (per serverless instance): 5 sends / 10 min. */
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const hits = new Map<string, number[]>();
+
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  // Opportunistic cleanup so the map can't grow unbounded.
+  if (hits.size > 1000) {
+    for (const [key, times] of hits) {
+      if (times.every((t) => now - t >= RATE_WINDOW_MS)) hits.delete(key);
+    }
+  }
+  return recent.length > RATE_LIMIT;
+}
+
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (rateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many messages in a short time. Please try again later." },
+      { status: 429 },
+    );
+  }
   let body: unknown;
   try {
     body = await request.json();
@@ -72,6 +99,19 @@ export async function POST(request: Request) {
   ) {
     return NextResponse.json(
       { error: "Please provide your name, a valid email address, and a message." },
+      { status: 400 },
+    );
+  }
+
+  // Length caps — reject absurd payloads outright.
+  if (
+    name.length > 100 ||
+    email.length > 200 ||
+    (typeof phone === "string" && phone.length > 50) ||
+    message.length > 5000
+  ) {
+    return NextResponse.json(
+      { error: "Your message is too long — please keep it under 5,000 characters." },
       { status: 400 },
     );
   }
