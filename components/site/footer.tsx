@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/site/container";
+import { Wordmark } from "@/components/site/wordmark";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -43,13 +43,7 @@ export function Footer() {
 
       <Container className="grid grid-cols-2 gap-x-8 gap-y-12 py-16 md:grid-cols-12 md:py-24">
         <div className="col-span-2 md:col-span-4">
-          <Image
-            src="/logo/niiplants-group-dark.png"
-            alt="Niiplants Group"
-            width={176}
-            height={120}
-            className="h-28 w-auto"
-          />
+          <Wordmark stacked className="max-w-[13rem] text-paper-0" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper-0/70">
             A diversified Ghanaian business group in mobility, hospitality,
             and business services — eight companies, one standard of

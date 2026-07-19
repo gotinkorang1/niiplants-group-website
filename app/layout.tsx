@@ -83,7 +83,7 @@ const organizationJsonLd = {
   url: siteUrl,
   description: siteDescription,
   // Logo powers Google's knowledge panel / rich results.
-  logo: `${siteUrl}/logo/niiplants-group-light.png`,
+  logo: `${siteUrl}/icon.png`,
   award:
     "Car Rental Service Provider of the Year 2024 — Ghana Tourism Authority, Greater Accra Regional Tourism Awards",
   address: {

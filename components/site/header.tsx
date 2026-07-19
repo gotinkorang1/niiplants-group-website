@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
@@ -9,6 +8,7 @@ import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
+import { Wordmark } from "@/components/site/wordmark";
 import { companiesByGroup, companyGroups } from "@/lib/companies";
 
 const primaryLinks = [
@@ -62,25 +62,14 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-3"
+          aria-label="Niiplants Group — home"
+          className={cn(
+            "transition-colors duration-300",
+            solid ? "text-ink-900" : "text-paper-0",
+          )}
           onClick={() => setMobileOpen(false)}
         >
-          <Image
-            src="/logo/niiplants-group-emblem.png"
-            alt=""
-            width={106}
-            height={44}
-            priority
-            className="h-10 w-auto md:h-11"
-          />
-          <span
-            className={cn(
-              "text-h3 font-display transition-colors duration-300",
-              solid ? "text-ink-900" : "text-paper-0",
-            )}
-          >
-            Niiplants Group
-          </span>
+          <Wordmark />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
