@@ -6,6 +6,7 @@ import { Industries } from "@/components/site/industries";
 import { PillarCallouts } from "@/components/site/pillar-callouts";
 import { MediaShowcase } from "@/components/site/media-showcase";
 import { Clients } from "@/components/site/clients";
+import { NewsTeaser } from "@/components/site/news/news-teaser";
 import { CtaBand } from "@/components/site/cta-band";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <PillarCallouts />
       <MediaShowcase />
       <Clients />
+      <NewsTeaser />
       <CtaBand />
     </>
   );

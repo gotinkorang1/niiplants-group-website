@@ -12,6 +12,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { ShareButtons } from "@/components/site/news/share-buttons";
+import { ReadingProgress } from "@/components/site/news/reading-progress";
 import { companies } from "@/lib/companies";
 import { getPost, getPosts, urlForImage, type NewsPost } from "@/lib/sanity";
 import { siteUrl } from "@/lib/site";
@@ -170,6 +171,8 @@ export default async function ArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <ReadingProgress />
 
       <PageHero eyebrow={companyLabel(post.company)} title={post.title}>
         <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-paper-0/70">

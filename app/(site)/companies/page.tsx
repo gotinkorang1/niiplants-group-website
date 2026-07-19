@@ -23,12 +23,25 @@ export default function CompaniesPage() {
         eyebrow="Our companies"
         title="One group, eight specialist businesses."
         lede="Our portfolio is built on natural adjacency — mobility feeds hospitality, logistics keeps fleets moving, and every company holds the same group standard of reliability."
-      />
+      >
+        {/* Cluster jump-links */}
+        <nav aria-label="Company clusters" className="mt-8 flex flex-wrap gap-2">
+          {companyGroups.map((group) => (
+            <a
+              key={group.id}
+              href={`#${group.id}`}
+              className="rounded-full border border-paper-0/30 px-4 py-2 text-sm text-paper-0/90 transition-colors duration-200 hover:border-accent-500 hover:bg-accent-700/20"
+            >
+              {group.label}
+            </a>
+          ))}
+        </nav>
+      </PageHero>
 
       <section className="py-20 md:py-28">
         <Container className="flex flex-col gap-20">
           {companyGroups.map((group) => (
-            <div key={group.id}>
+            <div key={group.id} id={group.id} className="scroll-mt-28">
               <Reveal>
                 <h2 className="text-label uppercase tracking-wide text-ink-500 mb-8">
                   {group.label}
