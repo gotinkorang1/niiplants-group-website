@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import { companies } from "@/lib/companies";
@@ -120,6 +122,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationJsonLd, webSiteJsonLd]) }}
         />
         {children}
+        {/* Cookieless, privacy-friendly — no consent banner required. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

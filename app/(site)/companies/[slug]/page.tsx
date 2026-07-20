@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
 import { DarkSurfaceDecor } from "@/components/site/dark-surface";
 import { LiteYouTube } from "@/components/site/lite-youtube";
+import { Faq } from "@/components/site/faq";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { Reveal } from "@/components/site/reveal";
 import { companies } from "@/lib/companies";
@@ -96,6 +97,20 @@ export default async function CompanyPage({
       ...(detail.phones ? { telephone: detail.phones[0] } : {}),
       ...(detail.email ? { email: detail.email } : {}),
     },
+    // FAQ rich results — eligible for expandable answers in Google.
+    ...(detail.faqs
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: detail.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -312,6 +327,25 @@ export default async function CompanyPage({
                   <p className="mt-2 text-ink-700">{highlight}</p>
                 </Reveal>
               ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* FAQs */}
+      {detail.faqs && (
+        <section className="py-20 md:py-28">
+          <Container className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-4">
+              <p className="text-label uppercase tracking-wide text-accent-700 mb-4">
+                Frequently asked
+              </p>
+              <h2 className="text-h2 font-display text-ink-900 text-balance">
+                Questions, answered.
+              </h2>
+            </Reveal>
+            <div className="lg:col-span-8">
+              <Faq items={detail.faqs} />
             </div>
           </Container>
         </section>

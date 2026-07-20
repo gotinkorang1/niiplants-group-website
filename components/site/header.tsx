@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 
@@ -19,6 +20,7 @@ const primaryLinks = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = React.useState(false);
   const [companiesOpen, setCompaniesOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -84,6 +86,7 @@ export function Header() {
               className={cn(
                 "flex items-center gap-1 text-base py-8 transition-colors duration-300",
                 solid ? "text-ink-900" : "text-paper-0",
+                pathname.startsWith("/companies") && "font-medium",
               )}
               aria-expanded={companiesOpen}
               aria-haspopup="true"
@@ -143,18 +146,23 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {primaryLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "link-underline text-base transition-colors duration-300",
-                solid ? "text-ink-900" : "text-paper-0",
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {primaryLinks.map((link) => {
+            const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "link-underline text-base transition-colors duration-300",
+                  solid ? "text-ink-900" : "text-paper-0",
+                  active && "after:scale-x-100 font-medium",
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">

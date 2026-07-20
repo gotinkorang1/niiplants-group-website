@@ -1,6 +1,7 @@
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { BackToTop } from "@/components/site/back-to-top";
+import { WhatsAppButton } from "@/components/site/whatsapp-button";
 
 /**
  * Site chrome — header, footer, skip link. The (site) route group keeps
@@ -20,6 +21,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         {children}
       </main>
       <Footer />
+      <WhatsAppButton />
       <BackToTop />
     </>
   );

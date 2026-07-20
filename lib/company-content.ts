@@ -30,6 +30,8 @@ export interface CompanyDetail {
   gallery?: { src: string; alt: string; caption?: string }[];
   /** Full-bleed hero background photo for the company page. */
   heroImage?: { src: string; alt: string };
+  /** Frequently asked questions — also emitted as FAQPage schema for rich results. */
+  faqs?: { question: string; answer: string }[];
   /** Slugs of 1–2 naturally adjacent sibling companies (docs/04-content.md). */
   crossLinks: string[];
 }
@@ -70,6 +72,49 @@ export const companyDetails: Record<string, CompanyDetail> = {
       src: "/photos/rentals-key-handover.jpg",
       alt: "Chauffeur handing over vehicle keys to a client",
     },
+    // Answers as published on niiplantsghana.com — client-confirmed, not invented.
+    faqs: [
+      {
+        question: "What types of vehicles do you offer for rental?",
+        answer:
+          "A diverse fleet to suit different needs — compact cars, sedans, SUVs, 4x4s, and spacious vans and coaster buses for group travel.",
+      },
+      {
+        question: "What documents are required to rent a car?",
+        answer:
+          "A valid driver's licence, a valid identification document (passport or national ID), and a credit or debit card for the reservation and security deposit.",
+      },
+      {
+        question: "Can I rent a car if I am under 25 years old?",
+        answer:
+          "We rent to drivers who are 25 years or older and hold a valid driver's licence.",
+      },
+      {
+        question: "Is insurance included in the rental price?",
+        answer:
+          "Yes — basic insurance cover is included in the rental price, and optional additional cover is available for extra peace of mind.",
+      },
+      {
+        question: "Are there any hidden fees or charges?",
+        answer:
+          "No. The total cost is stated clearly in your reservation, with no hidden fees or charges in the rental agreement.",
+      },
+      {
+        question: "What is your cancellation policy?",
+        answer:
+          "Cancellations are free up to 48 hours before the scheduled pick-up time. A cancellation fee may apply within 48 hours of pick-up.",
+      },
+      {
+        question: "Do you offer airport pick-up and drop-off?",
+        answer:
+          "Yes. Share your flight details when reserving and we will arrange airport pick-up and drop-off.",
+      },
+      {
+        question: "Can I travel outside Ghana with a rental car?",
+        answer:
+          "Our rental vehicles are for use within Ghana; crossing international borders is not permitted.",
+      },
+    ],
     ctaLabel: "Visit Niiplants and Car Rentals",
     youtubePlaylist: "UUgqE5Gwju32f7Quf6P0-DFg",
     youtubeChannelUrl: "https://www.youtube.com/@niiplantscarrental867",
