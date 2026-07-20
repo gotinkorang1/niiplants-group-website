@@ -1,5 +1,4 @@
 import { Hero } from "@/components/site/hero";
-import { StatsStrip } from "@/components/site/stats-strip";
 import { LogoStrip } from "@/components/site/logo-strip";
 import { SectorShowcase } from "@/components/site/sector-showcase";
 import { Industries } from "@/components/site/industries";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <StatsStrip />
       <LogoStrip />
       <SectorShowcase />
       <ImageBand
