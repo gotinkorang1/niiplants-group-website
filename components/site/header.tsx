@@ -13,6 +13,7 @@ import { companiesByGroup, companyGroups } from "@/lib/companies";
 
 const primaryLinks = [
   { href: "/about", label: "About" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/newsroom", label: "Newsroom" },
   { href: "/careers", label: "Careers" },
 ];

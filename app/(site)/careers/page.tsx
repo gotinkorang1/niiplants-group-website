@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
+import { ImageBand } from "@/components/site/image-band";
 import { companyGroups, companiesByGroup } from "@/lib/companies";
 
 export const metadata: Metadata = {
@@ -65,6 +66,15 @@ export default function CareersPage() {
           </div>
         </Container>
       </section>
+
+      <ImageBand
+        src="/photos/office-team.jpg"
+        alt="Colleagues collaborating in the office"
+        eyebrow="Our people"
+        title="Careers built across eight companies."
+        body="Grow with a group that promotes from within and gives people real responsibility early."
+        align="center"
+      />
 
       {/* Where you could work */}
       <section className="border-y border-line-200 bg-paper-50 py-20 md:py-24">

@@ -22,6 +22,7 @@ const socialIcons: Record<string, React.ComponentType<{ className?: string }>> =
 const groupLinks = [
   { href: "/about", label: "About the Group" },
   { href: "/companies", label: "Our Companies" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/newsroom", label: "Newsroom" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },

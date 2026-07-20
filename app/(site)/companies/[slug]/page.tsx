@@ -104,9 +104,31 @@ export default async function CompanyPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Subsidiary hero — shorter dark band with group endorsement lockup. */}
+      {/* Subsidiary hero — photo-backed band with group endorsement lockup. */}
       <section className="bg-noise relative overflow-hidden bg-gradient-to-br from-ink-900 via-[#101b30] to-ink-700 text-paper-0">
-        <DarkSurfaceDecor tint={company.tint} />
+        {detail.heroImage ? (
+          <>
+            <Image
+              src={detail.heroImage.src}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            {/* Scrim — guarantees text contrast over any photo. */}
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-ink-900 via-ink-900/85 to-ink-900/45"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-transparent to-ink-900/40"
+              aria-hidden="true"
+            />
+          </>
+        ) : (
+          <DarkSurfaceDecor tint={company.tint} />
+        )}
         <Container className="relative z-10 pb-12 pt-32 md:pb-20 md:pt-44">
           <Reveal>
             <p className="text-label uppercase tracking-wide text-paper-0/70 mb-4 flex items-center gap-3">

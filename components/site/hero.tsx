@@ -53,22 +53,28 @@ const float = (distance: number, duration: number, delay: number) => ({
 
 const slides = [
   {
-    src: "/trivoxo/event-biking.webp",
-    alt: "Trivoxo group biking tour on a ridge overlooking the valley",
-    tagline: ["Journeys that", "inspire."],
-    caption: "Adventure tours · Trivoxo, part of Niiplants Group",
+    src: "/photos/rentals-key-handover.jpg",
+    alt: "Chauffeur handing vehicle keys to a client",
+    tagline: ["Mobility,", "on demand."],
+    caption: "Car rentals, leasing & chauffeur services",
+  },
+  {
+    src: "/photos/logistics-truck-port.jpg",
+    alt: "Freight truck at a container port at sunset",
+    tagline: ["Goods that", "arrive."],
+    caption: "Logistics & distribution across Ghana",
   },
   {
     src: "/awards/ceo-receiving-award.jpg",
     alt: "Receiving an award on stage at the National Tourism Awards",
     tagline: ["Excellence,", "recognised."],
-    caption: "Recognised at the National Tourism Awards",
+    caption: "Honoured at the National Tourism Awards",
   },
   {
-    src: "/trivoxo/event-hiking.webp",
-    alt: "Trivoxo hiking event — group celebrating on a hillside trail",
+    src: "/trivoxo/event-biking.webp",
+    alt: "Trivoxo group biking tour on a ridge overlooking the valley",
     tagline: ["One group.", "Many journeys."],
-    caption: "Group experiences across Ghana",
+    caption: "Adventure tours · Trivoxo, part of Niiplants Group",
   },
 ];
 

@@ -32,3 +32,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original uncompressed photo drops (web-ready copies live in public/photos)
+/public/random

@@ -28,6 +28,8 @@ export interface CompanyDetail {
   youtubeChannelUrl?: string;
   /** Real photos for a gallery strip on the page. */
   gallery?: { src: string; alt: string; caption?: string }[];
+  /** Full-bleed hero background photo for the company page. */
+  heroImage?: { src: string; alt: string };
   /** Slugs of 1–2 naturally adjacent sibling companies (docs/04-content.md). */
   crossLinks: string[];
 }
@@ -64,6 +66,10 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ],
     phones: ["030 244 1805", "059 383 5941"],
     email: "rental@niiplantsghana.com",
+    heroImage: {
+      src: "/photos/rentals-key-handover.jpg",
+      alt: "Chauffeur handing over vehicle keys to a client",
+    },
     ctaLabel: "Visit Niiplants and Car Rentals",
     youtubePlaylist: "UUgqE5Gwju32f7Quf6P0-DFg",
     youtubeChannelUrl: "https://www.youtube.com/@niiplantscarrental867",
@@ -84,6 +90,22 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Structured leases for individuals and corporate fleets",
       "Maintenance support backed by the group's own workshop, NPL Automobile",
       "Part of a group that operates its own fleets every day",
+    ],
+    heroImage: {
+      src: "/photos/rentals-journey.jpg",
+      alt: "Clients travelling together in a leased vehicle",
+    },
+    gallery: [
+      {
+        src: "/photos/rentals-keys.jpg",
+        alt: "Client holding the keys to a leased vehicle",
+        caption: "Long-term leases, handled end to end.",
+      },
+      {
+        src: "/photos/automotive-workshop.jpg",
+        alt: "Technician servicing a fleet vehicle in the workshop",
+        caption: "Maintenance support through NPL Automobile.",
+      },
     ],
     ctaLabel: "Visit Plants Greene Leasing",
     crossLinks: ["car-rentals", "automotive"],
@@ -107,6 +129,22 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Fleet maintenance programmes for corporate clients",
       "Diagnostics-led repairs — fix the cause, not just the symptom",
     ],
+    heroImage: {
+      src: "/photos/automotive-repair.jpg",
+      alt: "Technician working under the bonnet of a vehicle in the workshop",
+    },
+    gallery: [
+      {
+        src: "/photos/automotive-workshop.jpg",
+        alt: "Mechanic carrying out diagnostics on a vehicle",
+        caption: "Diagnostics-led servicing and repair.",
+      },
+      {
+        src: "/photos/automotive-repair.jpg",
+        alt: "Specialist repairing a vehicle ignition system",
+        caption: "Engine, suspension, and electrical works.",
+      },
+    ],
     ctaLabel: "Request service",
     crossLinks: ["car-rentals", "logistics"],
   },
@@ -126,6 +164,32 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Nationwide operations across Ghana",
       "Fleet maintained in-house by NPL Automobile",
       "Serves corporations, institutions, and SMEs",
+    ],
+    heroImage: {
+      src: "/photos/logistics-truck-port.jpg",
+      alt: "Freight truck at a container port at sunset",
+    },
+    gallery: [
+      {
+        src: "/photos/logistics-warehouse-manager.jpg",
+        alt: "Warehouse supervisor coordinating parcels for dispatch",
+        caption: "Warehousing and distribution.",
+      },
+      {
+        src: "/photos/logistics-courier-van.jpg",
+        alt: "Courier checking packages at a delivery van",
+        caption: "Local delivery and corporate logistics.",
+      },
+      {
+        src: "/photos/logistics-driver.jpg",
+        alt: "Professional driver at the wheel of a haulage truck",
+        caption: "Fleet transport across Ghana.",
+      },
+      {
+        src: "/photos/logistics-port.jpg",
+        alt: "Cargo port with trucks and freight aircraft at sunset",
+        caption: "Connected to air and sea freight.",
+      },
     ],
     ctaLabel: "Visit Niiplants Logistics",
     crossLinks: ["automotive", "office-supplies"],
@@ -152,6 +216,10 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Air conditioning and free Wi-Fi in every room",
     ],
     location: "Poultry Farm Avenue, Dansoman, Accra, Ghana",
+    heroImage: {
+      src: "/photos/travel-traveller.jpg",
+      alt: "Guest relaxing during a stay",
+    },
     ctaLabel: "Book a stay",
     crossLinks: ["travel", "car-rentals"],
   },
@@ -184,6 +252,10 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "Adventure hiking experience with Trivoxo.",
       },
     ],
+    heroImage: {
+      src: "/photos/travel-harbour.jpg",
+      alt: "Traveller with a map at a harbour",
+    },
     ctaLabel: "Visit Trivoxo",
     crossLinks: ["plantsville-residences", "car-rentals"],
   },
@@ -196,6 +268,22 @@ export const companyDetails: Record<string, CompanyDetail> = {
     highlights: [
       "Restaurant dining and delivery",
       "Catering and event services for private and corporate functions",
+    ],
+    heroImage: {
+      src: "/photos/food-spread.jpg",
+      alt: "Freshly prepared dishes laid out on a table",
+    },
+    gallery: [
+      {
+        src: "/photos/food-service.jpg",
+        alt: "Server presenting a prepared meal at the bistro",
+        caption: "Restaurant service and catering.",
+      },
+      {
+        src: "/photos/food-cafe.jpg",
+        alt: "Guest enjoying a drink at the cafe",
+        caption: "A relaxed place to eat and meet.",
+      },
     ],
     ctaLabel: "Visit Puffs Ghana",
     crossLinks: ["plantsville-residences", "travel"],
@@ -215,6 +303,22 @@ export const companyDetails: Record<string, CompanyDetail> = {
     highlights: [
       "Procurement for businesses, schools, and institutions",
       "Delivery supported by the group's own logistics operation",
+    ],
+    heroImage: {
+      src: "/photos/supplies-notebooks.jpg",
+      alt: "Stacked notebooks and stationery supplies",
+    },
+    gallery: [
+      {
+        src: "/photos/supplies-binders.jpg",
+        alt: "Ring binders used for document storage",
+        caption: "Filing, stationery, and office consumables.",
+      },
+      {
+        src: "/photos/office-desk.jpg",
+        alt: "Organised modern office desk",
+        caption: "Equipping offices end to end.",
+      },
     ],
     ctaLabel: "Request a quote",
     crossLinks: ["logistics", "travel"],

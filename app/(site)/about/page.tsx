@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
 import { RouteNetworkArt } from "@/components/site/brand-art";
+import { ImageBand } from "@/components/site/image-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { CtaBand } from "@/components/site/cta-band";
@@ -160,6 +161,15 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <ImageBand
+        src="/photos/logistics-truck-port.jpg"
+        alt="Freight truck at a container port at sunset"
+        eyebrow="Our reach"
+        title="Eight companies. One operating standard."
+        body="From vehicles and freight to residences and supplies, every Niiplants company is run to the same standard of reliability."
+        cta={{ href: "/companies", label: "Explore our companies" }}
+      />
 
       {/* Leadership */}
       <section className="border-y border-line-200 bg-paper-50 py-20 md:py-28">
