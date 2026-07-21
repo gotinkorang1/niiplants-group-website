@@ -29,6 +29,21 @@ function rateLimited(ip: string): boolean {
 }
 
 export async function POST(request: Request) {
+  // Same-origin check — blocks cross-site scripted posts to this endpoint.
+  const origin = request.headers.get("origin");
+  if (origin) {
+    const host = request.headers.get("host");
+    let originHost: string | null = null;
+    try {
+      originHost = new URL(origin).host;
+    } catch {
+      originHost = null;
+    }
+    if (!originHost || originHost !== host) {
+      return NextResponse.json({ error: "Invalid request origin." }, { status: 403 });
+    }
+  }
+
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (rateLimited(ip)) {
     return NextResponse.json(

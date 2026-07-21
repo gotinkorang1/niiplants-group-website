@@ -7,7 +7,8 @@ import { Container } from "@/components/site/container";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { CtaBand } from "@/components/site/cta-band";
-import { companiesByGroup, companyGroups } from "@/lib/companies";
+import { companies, companiesByGroup, companyGroups } from "@/lib/companies";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Companies",
@@ -17,8 +18,37 @@ export const metadata: Metadata = {
 };
 
 export default function CompaniesPage() {
+  // ItemList tells Google this page is a directory of the group's companies.
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Niiplants Group companies",
+      numberOfItems: companies.length,
+      itemListElement: companies.map((company, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: company.name,
+        description: company.descriptor,
+        url: `${siteUrl}/companies/${company.slug}`,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+        { "@type": "ListItem", position: 2, name: "Companies", item: `${siteUrl}/companies` },
+      ],
+    },
+  ];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="Our companies"
         title="One group, eight specialist businesses."

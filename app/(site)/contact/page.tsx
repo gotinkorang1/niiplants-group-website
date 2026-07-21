@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, MessageCircle, Phone } from "lucide-react";
 
 import { Container } from "@/components/site/container";
 import { PageHero } from "@/components/site/page-hero";
@@ -8,6 +8,7 @@ import { Reveal } from "@/components/site/reveal";
 import { ContactForm } from "@/components/site/contact-form";
 import { companies } from "@/lib/companies";
 import { companyDetails } from "@/lib/company-content";
+import { whatsappNumber } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -24,6 +25,53 @@ export default function ContactPage() {
         title="Reach the group — or the right company directly."
         lede="Send an enquiry below and the right team will pick it up, or use a company's own contact details where listed."
       />
+
+      {/* Quick actions — fastest route to a human. */}
+      <section className="border-b border-line-200 bg-paper-50 py-10">
+        <Container>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {[
+              {
+                href: "tel:+233302441805",
+                label: "Call us",
+                value: "030 244 1805",
+                Icon: Phone,
+              },
+              {
+                href: `https://wa.me/${whatsappNumber}`,
+                label: "WhatsApp",
+                value: "059 383 5941",
+                Icon: MessageCircle,
+                external: true,
+              },
+              {
+                href: "mailto:rental@niiplantsghana.com",
+                label: "Email us",
+                value: "rental@niiplantsghana.com",
+                Icon: Mail,
+              },
+            ].map(({ href, label, value, Icon, external }, index) => (
+              <Reveal key={label} delay={index * 0.06}>
+                <a
+                  href={href}
+                  {...(external ? { target: "_blank", rel: "noopener" } : {})}
+                  className="card-lift group flex items-center gap-4 rounded-md border border-line-200 bg-paper-0 p-5"
+                >
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-accent-700/10 text-accent-700 transition-colors duration-300 group-hover:bg-accent-700 group-hover:text-paper-0">
+                    <Icon className="size-5" aria-hidden="true" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-label uppercase tracking-wide text-ink-500">
+                      {label}
+                    </span>
+                    <span className="block truncate font-medium text-ink-900">{value}</span>
+                  </span>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       <section className="py-20 md:py-28">
         <Container className="grid grid-cols-1 gap-16 lg:grid-cols-12">

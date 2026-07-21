@@ -97,6 +97,23 @@ export default async function CompanyPage({
       ...(detail.phones ? { telephone: detail.phones[0] } : {}),
       ...(detail.email ? { email: detail.email } : {}),
     },
+    // Service catalogue — surfaces the company's actual offerings to search.
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: `${company.sector} — ${company.name}`,
+      description: detail.intro,
+      provider: { "@type": "Organization", name: company.name },
+      areaServed: { "@type": "Country", name: "Ghana" },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: detail.servicesLabel,
+        itemListElement: detail.services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: service },
+        })),
+      },
+    },
     // FAQ rich results — eligible for expandable answers in Google.
     ...(detail.faqs
       ? [
