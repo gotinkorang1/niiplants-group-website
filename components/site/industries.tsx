@@ -9,6 +9,7 @@ import {
 
 import { Container } from "@/components/site/container";
 import { Reveal } from "@/components/site/reveal";
+import { SectionHeading } from "@/components/site/section-heading";
 
 const industries = [
   { icon: Car, label: "Transportation", tint: "car-rentals" },
@@ -23,15 +24,7 @@ export function Industries() {
   return (
     <section className="border-y border-line-200 bg-paper-50 py-24 md:py-32">
       <Container>
-        <Reveal className="max-w-2xl">
-          <p className="text-label uppercase tracking-wide text-accent-700 mb-4 flex items-center gap-3">
-            <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-            Industries we serve
-          </p>
-          <h2 className="text-h2 font-display text-ink-900 text-balance">
-            Six sectors, one accountable partner.
-          </h2>
-        </Reveal>
+        <SectionHeading eyebrow="Industries we serve" title="Six sectors, one accountable partner." />
 
         <ul className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {industries.map((industry, index) => (

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Container } from "@/components/site/container";
 import { Reveal } from "@/components/site/reveal";
+import { SectionHeading } from "@/components/site/section-heading";
 import { Testimonials } from "@/components/site/testimonials";
 
 /** Real client logos from public/clients — names per client-supplied files. */
@@ -24,20 +25,12 @@ export function Clients() {
   return (
     <section className="py-24 md:py-32">
       <Container>
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-label uppercase tracking-wide text-accent-700 mb-4 flex items-center justify-center gap-3">
-            <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-            Our clients
-            <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-          </p>
-          <h2 className="text-h2 font-display text-ink-900 text-balance">
-            Trusted by leading organisations.
-          </h2>
-          <p className="mt-4 text-body-lg text-ink-500">
-            Multinationals, institutions, and agencies rely on Nii Plants Group
-            companies every day.
-          </p>
-        </Reveal>
+        <SectionHeading
+          align="center"
+          eyebrow="Our clients"
+          title="Trusted by leading organisations."
+          lede="Multinationals, institutions, and agencies rely on Nii Plants Group companies every day."
+        />
 
         <ul className="mt-14 grid grid-cols-3 items-center gap-x-6 gap-y-10 sm:grid-cols-4 lg:grid-cols-6">
           {clients.map((client, index) => (

@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/site/reveal";
+import { SectionHeading } from "@/components/site/section-heading";
 import { Container } from "@/components/site/container";
 
 const pillars = [
@@ -23,15 +24,7 @@ export function PillarCallouts() {
   return (
     <section className="py-24 md:py-32">
       <Container>
-        <Reveal className="max-w-2xl">
-          <p className="text-label uppercase tracking-wide text-accent-700 mb-4 flex items-center gap-3">
-            <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-            Why Nii Plants Group
-          </p>
-          <h2 className="text-h2 font-display text-ink-900 text-balance">
-            Built to be depended on.
-          </h2>
-        </Reveal>
+        <SectionHeading eyebrow="Why Nii Plants Group" title="Built to be depended on." />
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {pillars.map((pillar, index) => (
             <Reveal key={pillar.label} delay={index * 0.08} className="h-full">

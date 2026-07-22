@@ -85,7 +85,25 @@
   /* Visible focus ring everywhere — never remove without a replacement (03-design-system.md). */
   :focus-visible {
     outline: 2px solid var(--color-accent-700);
-    outline-offset: 2px;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Optical refinements: tighter tracking on display type, better numerals. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Consistent, elegant text selection. */
+  ::selection {
+    background: var(--color-accent-700);
+    color: var(--color-paper-0);
   }
 }
 
@@ -133,16 +151,25 @@
     color: transparent;
   }
 
-  /* Premium card hover — lift + floating shadow, GPU-friendly. */
+  /* Premium card hover — lift + layered shadow, GPU-friendly. */
   .card-lift {
     transition:
-      transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-      box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-      border-color 0.35s ease-out;
+      transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.45s ease-out;
+    will-change: transform;
   }
   .card-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-floating);
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--color-ink-500) 35%, transparent);
+    box-shadow:
+      0 2px 4px rgba(11, 18, 32, 0.03),
+      0 12px 32px rgba(11, 18, 32, 0.09);
+  }
+  /* Tactile press feedback across interactive surfaces. */
+  .card-lift:active {
+    transform: translateY(-2px);
+    transition-duration: 0.1s;
   }
 
   /* Animated underline for nav links. */

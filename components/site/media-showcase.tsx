@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/site/container";
 import { Reveal } from "@/components/site/reveal";
+import { SectionHeading } from "@/components/site/section-heading";
 import { LiteYouTube } from "@/components/site/lite-youtube";
 import { VideoPlayer } from "@/components/site/video-player";
 
@@ -12,19 +13,11 @@ export function MediaShowcase() {
   return (
     <section className="border-y border-line-200 bg-paper-50 py-24 md:py-32">
       <Container>
-        <Reveal className="max-w-2xl">
-          <p className="text-label uppercase tracking-wide text-accent-700 mb-4 flex items-center gap-3">
-            <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-            Inside the group
-          </p>
-          <h2 className="text-h2 font-display text-ink-900 text-balance">
-            See our companies at work.
-          </h2>
-          <p className="mt-4 text-body-lg text-ink-500">
-            Real vehicles, real journeys, real service — from our fleet
-            expansion to the teams who keep it running.
-          </p>
-        </Reveal>
+        <SectionHeading
+          eyebrow="Inside the group"
+          title="See our companies at work."
+          lede="Real vehicles, real journeys, real service — from our fleet expansion to the teams who keep it running."
+        />
 
         <div className="mt-14 grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
           {/* Feature film — self-hosted group video. */}
