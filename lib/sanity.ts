@@ -58,6 +58,35 @@ export async function getPosts(): Promise<NewsPost[]> {
   }
 }
 
+export interface JobOpening {
+  _id: string;
+  title: string;
+  slug: string;
+  company: string;
+  location: string;
+  employmentType: string;
+  publishedAt: string;
+  closingDate?: string;
+  summary: string;
+  description?: PortableTextBlock[];
+}
+
+export async function getJobs(): Promise<JobOpening[]> {
+  if (!sanityClient) return [];
+  try {
+    return await sanityClient.fetch(
+      `*[_type == "job" && defined(slug.current)] | order(publishedAt desc) {
+        _id, title, "slug": slug.current, company, location,
+        employmentType, publishedAt, closingDate, summary, description
+      }`,
+      {},
+      { next: { revalidate: 60 } },
+    );
+  } catch {
+    return [];
+  }
+}
+
 export async function getPost(slug: string): Promise<NewsPost | null> {
   if (!sanityClient) return null;
   try {

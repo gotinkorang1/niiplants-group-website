@@ -6,7 +6,11 @@ import { Container } from "@/components/site/container";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { ImageBand } from "@/components/site/image-band";
-import { companyGroups, companiesByGroup } from "@/lib/companies";
+import { SectionHeading } from "@/components/site/section-heading";
+import { JobList, type JobCard } from "@/components/site/job-list";
+import { companies, companyGroups, companiesByGroup } from "@/lib/companies";
+import { getJobs } from "@/lib/sanity";
+import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -33,9 +37,76 @@ const reasons = [
   },
 ];
 
-export default function CareersPage() {
+export const revalidate = 60;
+
+const employmentLabels: Record<string, string> = {
+  FULL_TIME: "Full time",
+  PART_TIME: "Part time",
+  CONTRACTOR: "Contract",
+  TEMPORARY: "Temporary",
+  INTERN: "Internship",
+  OTHER: "National service",
+};
+
+function companyLabel(value: string) {
+  if (value === "group") return "Nii Plants Group";
+  return companies.find((c) => c.slug === value)?.name ?? "Nii Plants Group";
+}
+
+export default async function CareersPage() {
+  const jobs = await getJobs();
+
+  const jobCards: JobCard[] = jobs.map((job) => ({
+    id: job._id,
+    slug: job.slug,
+    title: job.title,
+    companyLabel: companyLabel(job.company),
+    location: job.location,
+    employmentLabel: employmentLabels[job.employmentType] ?? "Full time",
+    closingDate: job.closingDate
+      ? new Date(job.closingDate).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        })
+      : undefined,
+    summary: job.summary,
+    description: job.description,
+  }));
+
+  // JobPosting schema — makes open roles eligible for Google Jobs.
+  const jobsJsonLd = jobs.map((job) => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.summary,
+    datePosted: job.publishedAt,
+    ...(job.closingDate ? { validThrough: job.closingDate } : {}),
+    employmentType: job.employmentType,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: companyLabel(job.company),
+      sameAs: siteUrl,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location,
+        addressCountry: "GH",
+      },
+    },
+    directApply: true,
+  }));
+
   return (
     <>
+      {jobsJsonLd.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jobsJsonLd) }}
+        />
+      )}
       <PageHero
         eyebrow="Careers"
         title="Do work that keeps Ghana moving."
@@ -45,14 +116,7 @@ export default function CareersPage() {
       {/* Why work here */}
       <section className="py-20 md:py-28">
         <Container>
-          <Reveal className="max-w-2xl">
-            <p className="text-label uppercase tracking-wide text-accent-700 mb-4">
-              Why work with us
-            </p>
-            <h2 className="text-h2 font-display text-ink-900 text-balance">
-              A group career, not just a job.
-            </h2>
-          </Reveal>
+          <SectionHeading eyebrow="Why work with us" title="A group career, not just a job." />
           <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
             {reasons.map((reason, index) => (
               <Reveal key={reason.title} delay={index * 0.06}>
@@ -79,14 +143,7 @@ export default function CareersPage() {
       {/* Where you could work */}
       <section className="border-y border-line-200 bg-paper-50 py-20 md:py-24">
         <Container>
-          <Reveal className="max-w-2xl">
-            <p className="text-label uppercase tracking-wide text-accent-700 mb-4">
-              Where you could work
-            </p>
-            <h2 className="text-h2 font-display text-ink-900 text-balance">
-              Opportunities across the group.
-            </h2>
-          </Reveal>
+          <SectionHeading eyebrow="Where you could work" title="Opportunities across the group." />
           <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
             {companyGroups.map((group, index) => (
               <Reveal key={group.id} delay={index * 0.06}>
@@ -104,28 +161,43 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      {/* How to apply */}
+      {/* Open roles */}
       <section className="py-20 md:py-28">
         <Container>
-          <Reveal className="max-w-2xl">
-            <p className="text-label uppercase tracking-wide text-accent-700 mb-4">How to apply</p>
-            <h2 className="text-h2 font-display text-ink-900 text-balance">
-              Vacancies and internships.
-            </h2>
-            <p className="mt-4 text-body-lg text-ink-500">
-              Open roles are advertised as they arise. To apply — or to
-              register interest in an internship or national service placement
-              — send your CV and a short note about the company or role
-              you&apos;re interested in through our contact page.
-            </p>
-            <div className="mt-8">
-              <Button asChild size="lg">
-                <Link href="/contact?subject=careers">Apply now</Link>
-              </Button>
+          <SectionHeading
+            eyebrow="Open roles"
+            title={jobCards.length > 0 ? "Current vacancies." : "No vacancies right now."}
+            lede={
+              jobCards.length > 0
+                ? "Roles across the group, updated as they open."
+                : "We advertise roles here as they arise. In the meantime, you can register your interest below and we will keep your CV on file."
+            }
+          />
+          {jobCards.length > 0 && (
+            <div className="mt-12">
+              <JobList jobs={jobCards} />
             </div>
+          )}
+        </Container>
+      </section>
+
+      {/* Register interest */}
+      <section className="border-t border-line-200 bg-paper-50 py-20 md:py-24">
+        <Container>
+          <SectionHeading
+            align="center"
+            eyebrow="Speculative applications"
+            title="Not seeing your role?"
+            lede="Send your CV with a short note about the company or role you're interested in — including internships and national service placements — and we'll keep it on file for when something opens."
+          />
+          <Reveal className="mt-8 flex justify-center">
+            <Button asChild size="lg" className="btn-sheen">
+              <Link href="/contact?subject=careers">Send your CV</Link>
+            </Button>
           </Reveal>
         </Container>
       </section>
+
     </>
   );
 }
