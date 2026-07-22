@@ -13,7 +13,7 @@ import { siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our Companies",
   description:
-    "All 8 Niiplants Group companies — car rentals, vehicle leasing, automotive, logistics, serviced apartments, travel, food, and office supplies.",
+    "All 6 Niiplants Group companies — car rentals, vehicle leasing, logistics, travel, food, and office supplies.",
   alternates: { canonical: "/companies" },
 };
 
@@ -51,8 +51,8 @@ export default function CompaniesPage() {
       />
       <PageHero
         eyebrow="Our companies"
-        title="One group, eight specialist businesses."
-        lede="Our portfolio is built on natural adjacency — mobility feeds hospitality, logistics keeps fleets moving, and every company holds the same group standard of reliability."
+        title="One group, six specialist businesses."
+        lede="Our portfolio is built on natural adjacency — rentals feed leasing, logistics keeps goods moving, and every company holds the same group standard of reliability."
       >
         {/* Cluster jump-links */}
         <nav aria-label="Company clusters" className="mt-8 flex flex-wrap gap-2">

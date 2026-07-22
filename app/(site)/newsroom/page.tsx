@@ -13,7 +13,7 @@ import { getPosts, urlForImage } from "@/lib/sanity";
 export const metadata: Metadata = {
   title: "Newsroom",
   description:
-    "News, announcements, and updates from Niiplants Group and its eight companies.",
+    "News, announcements, and updates from Niiplants Group and its six companies.",
   alternates: { canonical: "/newsroom" },
 };
 

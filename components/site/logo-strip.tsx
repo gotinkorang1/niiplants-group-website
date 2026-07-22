@@ -13,8 +13,6 @@ const logos = [
   { src: "/logo/niiplants-logistics.png", alt: "Niiplants Logistics" },
   { src: "/logo/plants-greene.png", alt: "Plants Greene Leasing" },
   { src: "/logo/trivoxo.png", alt: "Trivoxo Limited Company" },
-  { src: "/logo/plantsville-residences.jpg", alt: "Plantsville Residences" },
-  { src: "/logo/npl-automobile.png", alt: "NPL Automobile" },
   { src: "/logo/puffs-ghana.png", alt: "Puffs Ghana" },
 ];
 

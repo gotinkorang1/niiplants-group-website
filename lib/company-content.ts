@@ -66,8 +66,8 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "On stage at the National Tourism Awards.",
       },
     ],
-    phones: ["030 244 1805", "059 383 5941"],
-    email: "rental@niiplantsghana.com",
+    phones: ["030 232 9755", "+233 59 388 5264"],
+    email: "info@niiplantsghana.com",
     heroImage: {
       src: "/photos/rentals-key-handover.jpg",
       alt: "Chauffeur handing over vehicle keys to a client",
@@ -118,7 +118,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ctaLabel: "Visit Niiplants and Car Rentals",
     youtubePlaylist: "UUgqE5Gwju32f7Quf6P0-DFg",
     youtubeChannelUrl: "https://www.youtube.com/@niiplantscarrental867",
-    crossLinks: ["vehicle-leasing", "automotive"],
+    crossLinks: ["vehicle-leasing", "logistics"],
   },
   "vehicle-leasing": {
     slug: "vehicle-leasing",
@@ -133,7 +133,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ],
     highlights: [
       "Structured leases for individuals and corporate fleets",
-      "Maintenance support backed by the group's own workshop, NPL Automobile",
+      "Maintenance support arranged as part of every lease",
       "Part of a group that operates its own fleets every day",
     ],
     heroImage: {
@@ -149,48 +149,10 @@ export const companyDetails: Record<string, CompanyDetail> = {
       {
         src: "/photos/automotive-workshop.jpg",
         alt: "Technician servicing a fleet vehicle in the workshop",
-        caption: "Maintenance support through NPL Automobile.",
+        caption: "Maintenance support included with every lease.",
       },
     ],
     ctaLabel: "Visit Plants Greene Leasing",
-    crossLinks: ["car-rentals", "automotive"],
-  },
-  automotive: {
-    slug: "automotive",
-    intro:
-      "NPL Automobile is the workshop behind the group's own fleets — and it brings that same standard to yours. From routine servicing and diagnostics to engine, suspension, and electrical work, vehicles are repaired by the team that keeps hundreds of group trips on the road.",
-    servicesLabel: "Services",
-    services: [
-      "Vehicle servicing",
-      "Diagnostics",
-      "Repairs",
-      "Engine works",
-      "Suspension",
-      "Electrical repairs",
-      "Fleet maintenance",
-    ],
-    highlights: [
-      "Maintains the fleets of Niiplants and Car Rentals and Niiplants Logistics",
-      "Fleet maintenance programmes for corporate clients",
-      "Diagnostics-led repairs — fix the cause, not just the symptom",
-    ],
-    heroImage: {
-      src: "/photos/automotive-repair.jpg",
-      alt: "Technician working under the bonnet of a vehicle in the workshop",
-    },
-    gallery: [
-      {
-        src: "/photos/automotive-workshop.jpg",
-        alt: "Mechanic carrying out diagnostics on a vehicle",
-        caption: "Diagnostics-led servicing and repair.",
-      },
-      {
-        src: "/photos/automotive-repair.jpg",
-        alt: "Specialist repairing a vehicle ignition system",
-        caption: "Engine, suspension, and electrical works.",
-      },
-    ],
-    ctaLabel: "Request service",
     crossLinks: ["car-rentals", "logistics"],
   },
   logistics: {
@@ -207,7 +169,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ],
     highlights: [
       "Nationwide operations across Ghana",
-      "Fleet maintained in-house by NPL Automobile",
+      "Professionally maintained fleet",
       "Serves corporations, institutions, and SMEs",
     ],
     heroImage: {
@@ -237,36 +199,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
       },
     ],
     ctaLabel: "Visit Niiplants Logistics",
-    crossLinks: ["automotive", "office-supplies"],
-  },
-  "plantsville-residences": {
-    slug: "plantsville-residences",
-    intro:
-      "Plantsville Residences offers premium serviced apartments in Dansoman, Accra — comfort, security, and convenience under one roof. Every room comes with air conditioning and free Wi-Fi, and the essentials city guests worry about — power, water, security — simply never lapse.",
-    servicesLabel: "Facilities",
-    services: [
-      "One-bedroom apartments",
-      "Standard rooms",
-      "24-hour security",
-      "Free Wi-Fi",
-      "Air conditioning",
-      "Laundry service",
-      "Free parking",
-      "Constant electricity",
-      "Uninterrupted clean water",
-    ],
-    highlights: [
-      "24-hour security on the premises",
-      "Constant power and uninterrupted clean water",
-      "Air conditioning and free Wi-Fi in every room",
-    ],
-    location: "Poultry Farm Avenue, Dansoman, Accra, Ghana",
-    heroImage: {
-      src: "/photos/travel-traveller.jpg",
-      alt: "Guest relaxing during a stay",
-    },
-    ctaLabel: "Book a stay",
-    crossLinks: ["travel", "car-rentals"],
+    crossLinks: ["car-rentals", "office-supplies"],
   },
   travel: {
     slug: "travel",
@@ -302,7 +235,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
       alt: "Traveller with a map at a harbour",
     },
     ctaLabel: "Visit Trivoxo",
-    crossLinks: ["plantsville-residences", "car-rentals"],
+    crossLinks: ["travel", "car-rentals"],
   },
   food: {
     slug: "food",
@@ -331,7 +264,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
       },
     ],
     ctaLabel: "Visit Puffs Ghana",
-    crossLinks: ["plantsville-residences", "travel"],
+    crossLinks: ["travel", "car-rentals"],
   },
   "office-supplies": {
     slug: "office-supplies",

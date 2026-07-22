@@ -46,8 +46,8 @@ export function Footer() {
         <div className="col-span-2 md:col-span-4">
           <Wordmark stacked className="max-w-[13rem] text-paper-0" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper-0/70">
-            A diversified Ghanaian business group in mobility, hospitality,
-            and business services — eight companies, one standard of
+            A diversified Ghanaian business group in mobility, travel,
+            and business services — six companies, one standard of
             reliability.
           </p>
           <ul className="mt-6 flex flex-col gap-3 text-sm text-paper-0/70">
@@ -57,12 +57,12 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2.5">
               <Phone className="mt-0.5 size-4 shrink-0 text-accent-500" aria-hidden="true" />
-              030 244 1805 · 059 383 5941
+              030 232 9755 · +233 59 388 5264
             </li>
             <li className="flex items-start gap-2.5">
               <Mail className="mt-0.5 size-4 shrink-0 text-accent-500" aria-hidden="true" />
-              <a href="mailto:rental@niiplantsghana.com" className="hover:text-accent-500">
-                rental@niiplantsghana.com
+              <a href="mailto:info@niiplantsghana.com" className="hover:text-accent-500">
+                info@niiplantsghana.com
               </a>
             </li>
           </ul>

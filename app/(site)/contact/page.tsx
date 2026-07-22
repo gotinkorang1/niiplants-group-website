@@ -13,7 +13,7 @@ import { whatsappNumber } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Niiplants Group or reach any of its eight companies directly — car rentals, leasing, automotive, logistics, residences, travel, food, and office supplies.",
+    "Contact Niiplants Group or reach any of its six companies directly — car rentals, leasing, logistics, travel, food, and office supplies.",
   alternates: { canonical: "/contact" },
 };
 
@@ -34,20 +34,20 @@ export default function ContactPage() {
               {
                 href: "tel:+233302441805",
                 label: "Call us",
-                value: "030 244 1805",
+                value: "030 232 9755",
                 Icon: Phone,
               },
               {
                 href: `https://wa.me/${whatsappNumber}`,
                 label: "WhatsApp",
-                value: "059 383 5941",
+                value: "+233 59 388 5264",
                 Icon: MessageCircle,
                 external: true,
               },
               {
-                href: "mailto:rental@niiplantsghana.com",
+                href: "mailto:info@niiplantsghana.com",
                 label: "Email us",
-                value: "rental@niiplantsghana.com",
+                value: "info@niiplantsghana.com",
                 Icon: Mail,
               },
             ].map(({ href, label, value, Icon, external }, index) => (

@@ -45,17 +45,6 @@ export const companies: Company[] = [
     logo: "/logo/plants-greene.png",
   },
   {
-    slug: "automotive",
-    name: "NPL Automobile",
-    sector: "Automotive",
-    group: "mobility",
-    descriptor:
-      "Vehicle repair and maintenance, backed by a group that runs its own fleets day to day.",
-    pageType: "internal",
-    tint: "automotive",
-    logo: "/logo/npl-automobile.png",
-  },
-  {
     slug: "logistics",
     name: "Niiplants Logistics",
     sector: "Logistics",
@@ -65,17 +54,6 @@ export const companies: Company[] = [
     externalUrl: "https://niiplantslogistics.com",
     tint: "logistics",
     logo: "/logo/niiplants-logistics.png",
-  },
-  {
-    slug: "plantsville-residences",
-    name: "Plantsville Residences",
-    sector: "Hospitality",
-    group: "hospitality-travel",
-    descriptor:
-      "Serviced apartments in Dansoman, Accra, with 24-hour security, uninterrupted power and water, and free Wi-Fi in every room.",
-    pageType: "internal",
-    tint: "hospitality",
-    logo: "/logo/plantsville-residences.jpg",
   },
   {
     slug: "travel",

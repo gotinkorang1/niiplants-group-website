@@ -11,13 +11,13 @@ import { companyGroups, companiesByGroup } from "@/lib/companies";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Build your career across Niiplants Group's eight companies — from automotive and logistics to hospitality, travel, and corporate services in Ghana.",
+    "Build your career across Niiplants Group's six companies — from logistics and vehicle leasing to travel, food, and corporate services in Ghana.",
   alternates: { canonical: "/careers" },
 };
 
 const reasons = [
   {
-    title: "Eight businesses, one employer",
+    title: "Six businesses, one employer",
     description:
       "Careers here can cross industries — a start in car rentals can grow into fleet leasing, logistics, or group operations.",
   },
@@ -39,7 +39,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Do work that keeps Ghana moving."
-        lede="Across mobility, hospitality, and business services, Niiplants Group hires people who take service seriously — and gives them room to grow across eight companies."
+        lede="Across mobility, travel, and business services, Niiplants Group hires people who take service seriously — and gives them room to grow across six companies."
       />
 
       {/* Why work here */}
@@ -71,7 +71,7 @@ export default function CareersPage() {
         src="/photos/office-team.jpg"
         alt="Colleagues collaborating in the office"
         eyebrow="Our people"
-        title="Careers built across eight companies."
+        title="Careers built across six companies."
         body="Grow with a group that promotes from within and gives people real responsibility early."
         align="center"
       />

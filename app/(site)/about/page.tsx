@@ -15,7 +15,7 @@ import { companyGroups, companiesByGroup } from "@/lib/companies";
 export const metadata: Metadata = {
   title: "About the Group",
   description:
-    "Niiplants Group is a diversified Ghanaian business group — eight companies across mobility, hospitality, and business services, one standard of reliability.",
+    "Niiplants Group is a diversified Ghanaian business group — six companies across mobility, travel, and business services, one standard of reliability.",
   alternates: { canonical: "/about" },
 };
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About the Group"
         title="Built in Ghana. Built to be depended on."
-        lede="Founded in Ghana, Niiplants Group has grown into a diversified group of eight companies delivering reliable services across mobility, hospitality, and business services — for individuals, corporations, and government institutions."
+        lede="Founded in Ghana, Niiplants Group has grown into a diversified group of six companies delivering reliable services across mobility, travel, and business services — for individuals, corporations, and government institutions."
       />
 
       {/* Story */}
@@ -105,10 +105,9 @@ export default function AboutPage() {
               moving, travellers who needed somewhere dependable to stay.
             </p>
             <p>
-              That is why the portfolio holds together: mobility feeds
-              hospitality, logistics keeps fleets moving, and the workshop that
-              services our own vehicles services our clients&apos; too. Eight
-              specialist companies, one standard of reliability.
+              That is why the portfolio holds together: rentals feed leasing,
+              logistics keeps goods moving, and travel connects the journeys in
+              between. Six specialist companies, one standard of reliability.
             </p>
             <p>
               Today the group serves individuals, corporations, and government
@@ -126,7 +125,7 @@ export default function AboutPage() {
             <p className="text-label uppercase tracking-wide text-accent-700 mb-4">Mission</p>
             <p className="text-h3 font-display text-ink-900 text-balance">
               To deliver dependable, professionally-run services — across
-              mobility, hospitality, and business supply — that organisations
+              mobility, travel, and business supply — that organisations
               and travellers in Ghana can build on.
             </p>
           </Reveal>
@@ -166,7 +165,7 @@ export default function AboutPage() {
         src="/photos/logistics-truck-port.jpg"
         alt="Freight truck at a container port at sunset"
         eyebrow="Our reach"
-        title="Eight companies. One operating standard."
+        title="Six companies. One operating standard."
         body="From vehicles and freight to residences and supplies, every Niiplants company is run to the same standard of reliability."
         cta={{ href: "/companies", label: "Explore our companies" }}
       />
@@ -264,7 +263,7 @@ export default function AboutPage() {
               How the group is organised
             </p>
             <h2 className="text-h2 font-display text-ink-900 text-balance">
-              Three clusters, eight companies.
+              Three clusters, six companies.
             </h2>
             <p className="mt-4 text-body-lg text-ink-500">
               Our companies are organised by how they work together — not as a

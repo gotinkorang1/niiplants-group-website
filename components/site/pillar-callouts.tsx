@@ -10,12 +10,12 @@ const pillars = [
   {
     label: "Scale",
     copy:
-      "Eight companies spanning mobility, hospitality, and business services, run to one group standard.",
+      "Six companies spanning mobility, travel, and business services, run to one group standard.",
   },
   {
     label: "Stability",
     copy:
-      "Fleet leasing, serviced apartments, and logistics that keep running for clients who depend on them daily.",
+      "Fleet leasing, logistics, and daily services that keep running for clients who depend on them.",
   },
 ];
 

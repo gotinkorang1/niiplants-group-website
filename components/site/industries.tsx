@@ -1,12 +1,10 @@
 import {
-  Building2,
   Car,
   KeyRound,
   Package,
   Plane,
   Truck,
   UtensilsCrossed,
-  Wrench,
 } from "lucide-react";
 
 import { Container } from "@/components/site/container";
@@ -14,10 +12,8 @@ import { Reveal } from "@/components/site/reveal";
 
 const industries = [
   { icon: Car, label: "Transportation", tint: "car-rentals" },
-  { icon: Building2, label: "Hospitality & Real Estate", tint: "hospitality" },
   { icon: Truck, label: "Logistics", tint: "logistics" },
   { icon: Plane, label: "Travel", tint: "travel" },
-  { icon: Wrench, label: "Automotive", tint: "automotive" },
   { icon: UtensilsCrossed, label: "Food", tint: "food" },
   { icon: KeyRound, label: "Leasing", tint: "leasing" },
   { icon: Package, label: "Procurement", tint: "office" },
@@ -33,7 +29,7 @@ export function Industries() {
             Industries we serve
           </p>
           <h2 className="text-h2 font-display text-ink-900 text-balance">
-            Eight sectors, one accountable partner.
+            Six sectors, one accountable partner.
           </h2>
         </Reveal>
 

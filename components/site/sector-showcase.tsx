@@ -15,11 +15,11 @@ export function SectorShowcase() {
             Our companies
           </p>
           <h2 className="text-h2 font-display text-ink-900 text-balance">
-            One group, eight specialist businesses.
+            One group, six specialist businesses.
           </h2>
           <p className="mt-4 text-body-lg text-ink-500">
-            Several of our companies work together naturally — mobility feeds
-            hospitality, logistics keeps fleets moving. Explore them below,
+            Several of our companies work together naturally — rentals feed
+            leasing, logistics keeps goods moving. Explore them below,
             grouped by how they relate.
           </p>
         </Reveal>
