@@ -9,6 +9,8 @@ import { ContactForm } from "@/components/site/contact-form";
 import { companies } from "@/lib/companies";
 import { companyDetails } from "@/lib/company-content";
 import { whatsappNumber } from "@/lib/site";
+import { Faq } from "@/components/site/faq";
+import { SectionHeading } from "@/components/site/section-heading";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -17,9 +19,51 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
+const groupFaqs = [
+  {
+    question: "Which company should I contact?",
+    answer:
+      "If you know the company you need, use the directory on this page to reach it directly. If you're not sure, send your enquiry through the form and we will route it to the right team within the group.",
+  },
+  {
+    question: "How quickly will I get a response?",
+    answer:
+      "Enquiries are answered during working hours — Monday to Saturday, 9:00 to 17:00 GMT. For anything urgent, call or message us on WhatsApp rather than emailing.",
+  },
+  {
+    question: "Do you work with corporate and government clients?",
+    answer:
+      "Yes. Nii Plants Group serves individuals, corporations, NGOs, and government institutions, including recurring contracts for transport, logistics, and office supply.",
+  },
+  {
+    question: "Can one contract cover services from several companies?",
+    answer:
+      "Yes. Organisations often need vehicles, distribution, and supplies together. Tell us the full scope and we will coordinate across the relevant companies for you.",
+  },
+  {
+    question: "Where are you located?",
+    answer:
+      "Our base is in Dansoman, Accra, and we operate nationwide across Ghana. The map on this page shows our location.",
+  },
+];
+
 export default function ContactPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: groupFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <PageHero
         eyebrow="Contact"
         title="Reach the group — or the right company directly."
@@ -32,7 +76,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[
               {
-                href: "tel:+233302441805",
+                href: "tel:+233302329755",
                 label: "Call us",
                 value: "030 232 9755",
                 Icon: Phone,
@@ -151,6 +195,20 @@ export default function ContactPage() {
                 />
               </div>
             </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* Group FAQs */}
+      <section className="border-t border-line-200 bg-paper-50 py-20 md:py-28">
+        <Container className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <SectionHeading
+            className="lg:col-span-4"
+            eyebrow="Common questions"
+            title="Before you get in touch."
+          />
+          <div className="lg:col-span-8">
+            <Faq items={groupFaqs} />
           </div>
         </Container>
       </section>

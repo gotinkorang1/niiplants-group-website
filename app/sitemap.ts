@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { companies } from "@/lib/companies";
+import { companyDetails } from "@/lib/company-content";
 import { getPosts } from "@/lib/sanity";
 import { siteUrl } from "@/lib/site";
 
@@ -22,12 +23,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/terms-of-use`, priority: 0.2, changeFrequency: "yearly", lastModified },
   ];
 
-  const companyRoutes: MetadataRoute.Sitemap = companies.map((company) => ({
-    url: `${siteUrl}/companies/${company.slug}`,
-    priority: 0.8,
-    changeFrequency: "monthly",
-    lastModified,
-  }));
+  // Company routes carry their imagery so Google Images can index it too.
+  const companyRoutes: MetadataRoute.Sitemap = companies.map((company) => {
+    const detail = companyDetails[company.slug];
+    const images = [
+      detail?.heroImage?.src,
+      ...(detail?.gallery ?? []).map((photo) => photo.src),
+    ].filter((src): src is string => Boolean(src));
+
+    return {
+      url: `${siteUrl}/companies/${company.slug}`,
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+      lastModified,
+      ...(images.length ? { images: images.map((src) => `${siteUrl}${src}`) } : {}),
+    };
+  });
 
   // Newsroom articles — dated by their publish time.
   const posts = await getPosts();

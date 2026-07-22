@@ -152,6 +152,28 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "Corporate fleets, managed end to end.",
       },
     ],
+    faqs: [
+      {
+        question: "How long are your lease terms?",
+        answer:
+          "Leases are structured long-term rather than by the day — terms are agreed to suit your operating needs and budget.",
+      },
+      {
+        question: "What is included in a lease?",
+        answer:
+          "The vehicle plus the administration around it — maintenance support and fleet management are arranged as part of the agreement.",
+      },
+      {
+        question: "Can you manage a fleet we already own?",
+        answer:
+          "Yes. Fleet management is available as a service for organisations that own their vehicles but want the day-to-day running handled.",
+      },
+      {
+        question: "Do you lease to individuals as well as companies?",
+        answer:
+          "Yes — leases are available to both individuals and corporate clients.",
+      },
+    ],
     ctaLabel: "Visit Plants Greene Leasing",
     crossLinks: ["car-rentals", "logistics"],
   },
@@ -198,6 +220,33 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "Connected to air and sea freight.",
       },
     ],
+    faqs: [
+      {
+        question: "What kinds of goods do you move?",
+        answer:
+          "General cargo for businesses and institutions — palletised goods, cartons, equipment, and distribution stock. Contact us with your load type and route and we will confirm suitability.",
+      },
+      {
+        question: "Do you deliver outside Accra?",
+        answer:
+          "Yes. We operate nationwide across Ghana, from same-city deliveries in Accra to regional distribution runs.",
+      },
+      {
+        question: "Can you handle regular, scheduled distribution?",
+        answer:
+          "Yes. Corporate clients can set up recurring routes and schedules so deliveries run on a fixed cycle rather than being booked each time.",
+      },
+      {
+        question: "Do you offer storage as well as transport?",
+        answer:
+          "Yes — warehousing is available alongside transport, so goods can be stored and dispatched as needed rather than moved in one trip.",
+      },
+      {
+        question: "How do I get a quote?",
+        answer:
+          "Send us your pickup and delivery points, the type and volume of goods, and how often you need the service. We will come back with pricing.",
+      },
+    ],
     ctaLabel: "Visit Nii Plants Logistics",
     crossLinks: ["car-rentals", "office-supplies"],
   },
@@ -234,6 +283,33 @@ export const companyDetails: Record<string, CompanyDetail> = {
       src: "/photos/travel-harbour.jpg",
       alt: "Traveller with a map at a harbour",
     },
+    faqs: [
+      {
+        question: "Do you book international as well as domestic flights?",
+        answer:
+          "Yes. We ticket both domestic routes within Ghana and international departures, and can hold or amend bookings as your plans firm up.",
+      },
+      {
+        question: "Can you help with visa applications?",
+        answer:
+          "Yes. We advise on requirements, help assemble supporting documents, and guide you through the application process for your destination.",
+      },
+      {
+        question: "Do you arrange tours and group experiences?",
+        answer:
+          "Yes — guided tours, biking and hiking experiences, and group itineraries for companies, families, and private groups.",
+      },
+      {
+        question: "Can you arrange airport transfers and vehicles?",
+        answer:
+          "Yes. Because Trivoxo is part of Nii Plants Group, airport pickup and vehicle hire can be arranged alongside your booking.",
+      },
+      {
+        question: "Do you offer travel insurance?",
+        answer:
+          "Yes. Travel insurance can be added to any booking — tell us your destination and trip length and we will advise on cover.",
+      },
+    ],
     ctaLabel: "Visit Trivoxo",
     crossLinks: ["travel", "car-rentals"],
   },
@@ -263,13 +339,30 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "A relaxed place to eat and meet.",
       },
     ],
+    faqs: [
+      {
+        question: "Do you cater for corporate events?",
+        answer:
+          "Yes. We cater meetings, conferences, and company functions, with menus and quantities agreed in advance.",
+      },
+      {
+        question: "How far in advance should I book catering?",
+        answer:
+          "The earlier the better, especially for large events. Get in touch with your date, guest numbers, and menu preferences and we will confirm availability.",
+      },
+      {
+        question: "Do you deliver?",
+        answer:
+          "Yes — delivery is available alongside dine-in service.",
+      },
+    ],
     ctaLabel: "Visit Puffs Ghana",
     crossLinks: ["travel", "car-rentals"],
   },
   "office-supplies": {
     slug: "office-supplies",
     intro:
-      "Papersource supplies the things offices and schools run on — stationery, printing supplies, and equipment — with the procurement discipline corporate buyers expect. One supplier, consolidated invoicing, dependable delivery.",
+      "Papersource keeps offices, schools, and institutions stocked — stationery, printing consumables, filing systems, and equipment — with the procurement discipline corporate buyers expect. One supplier instead of five, consolidated invoicing instead of scattered receipts, and delivery backed by our own logistics network.",
     servicesLabel: "Services",
     services: [
       "Office stationery",
@@ -279,8 +372,9 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Office equipment",
     ],
     highlights: [
-      "Procurement for businesses, schools, and institutions",
-      "Delivery supported by the group's own logistics operation",
+      "One accountable supplier for stationery, print consumables, and equipment",
+      "Recurring supply schedules so stock arrives before you run out",
+      "Delivery across Accra and nationwide via Nii Plants Logistics",
     ],
     heroImage: {
       src: "/photos/supplies-notebooks.jpg",
@@ -296,6 +390,33 @@ export const companyDetails: Record<string, CompanyDetail> = {
         src: "/photos/office-desk.jpg",
         alt: "Organised modern office desk",
         caption: "Equipping offices end to end.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you supply businesses on account?",
+        answer:
+          "Yes. Corporate and institutional clients can order on agreed terms with consolidated invoicing rather than paying per order.",
+      },
+      {
+        question: "What do you supply?",
+        answer:
+          "Office stationery, printing consumables, filing and document storage, school supplies, and office equipment. If you need something not listed, ask — we source to order.",
+      },
+      {
+        question: "Can you deliver to our offices?",
+        answer:
+          "Yes. Delivery across Accra and nationwide is supported by Nii Plants Logistics, part of the same group.",
+      },
+      {
+        question: "Do you handle bulk or recurring orders?",
+        answer:
+          "Yes. Recurring supply schedules can be set up so stock arrives on a regular cycle without re-ordering each time.",
+      },
+      {
+        question: "How do I request a quote?",
+        answer:
+          "Send us your item list and quantities through the contact form and we will return a written quotation.",
       },
     ],
     ctaLabel: "Request a quote",
