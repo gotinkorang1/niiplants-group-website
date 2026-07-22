@@ -37,13 +37,13 @@ Puffs Ghana). Those arrived as pasted images in chat, not files, so the hex
 values below are eyeballed from the artwork — close enough to plan with, but
 **not pixel-exact**. Get the actual logo files (see open item in
 [roadmap.md](roadmap.md)) and re-sample before this goes to production. The
-placeholder colors for Niiplants and Car Rentals and Papersource remain
+placeholder colors for Nii Plants and Car Rentals and Papersource remain
 invented pending their logos.
 
 | Sector | Company | Tint | Source |
 |---|---|---|---|
-| Car Rentals | Niiplants and Car Rentals | `#2F5D8A` (steel blue) | placeholder — no logo yet |
-| Logistics | Niiplants Logistics | `#12213F` (navy) + `#F0742C` (orange) accent | real logo, eyeballed |
+| Car Rentals | Nii Plants and Car Rentals | `#2F5D8A` (steel blue) | placeholder — no logo yet |
+| Logistics | Nii Plants Logistics | `#12213F` (navy) + `#F0742C` (orange) accent | real logo, eyeballed |
 | Hospitality / Real Estate | Plantsville Residences | `#B8912B` (antique gold) + `#1B1B2F` (near-black) | real logo, eyeballed — close to our own placeholder primary accent |
 | Travel | Trivoxo Limited Company | `#F2431E` (orange-red) + `#FBB03B` (yellow-orange, the checkmark) | real logo, eyeballed |
 | Automotive | NPL Automobile | `#D9202B` (red) | real logo, eyeballed |

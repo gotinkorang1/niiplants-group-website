@@ -11,7 +11,7 @@ const testimonials = [
     quote:
       "Booking a car with Nii Plants & Car Rentals is reasonably quick and straight forward. I particularly enjoyed the professionalism of the driver. I believe their services are quite efficient.",
     name: "Gershon Navada",
-    role: "Client, Niiplants and Car Rentals",
+    role: "Client, Nii Plants and Car Rentals",
   },
   {
     quote:

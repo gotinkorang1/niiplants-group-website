@@ -22,7 +22,7 @@ export interface Company {
 export const companies: Company[] = [
   {
     slug: "car-rentals",
-    name: "Niiplants and Car Rentals",
+    name: "Nii Plants and Car Rentals",
     sector: "Car Rentals",
     group: "mobility",
     descriptor:
@@ -46,7 +46,7 @@ export const companies: Company[] = [
   },
   {
     slug: "logistics",
-    name: "Niiplants Logistics",
+    name: "Nii Plants Logistics",
     sector: "Logistics",
     group: "mobility",
     descriptor: "Freight and haulage services that keep goods moving reliably across Ghana.",

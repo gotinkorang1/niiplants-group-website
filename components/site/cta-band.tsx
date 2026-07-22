@@ -12,7 +12,7 @@ export function CtaBand() {
       <Container className="relative z-10 py-20 md:py-24">
         <Reveal className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <h2 className="text-h2 font-display text-balance">Work with Niiplants Group</h2>
+            <h2 className="text-h2 font-display text-balance">Work with Nii Plants Group</h2>
             <p className="mt-3 max-w-lg text-paper-0/80">
               Reach the right company directly, or get in touch with the
               group for partnership and career enquiries.

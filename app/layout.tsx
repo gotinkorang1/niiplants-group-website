@@ -23,12 +23,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Niiplants Group | Mobility, Hospitality & Business Services in Ghana",
-    template: "%s | Niiplants Group",
+    default: "Nii Plants Group | Mobility, Hospitality & Business Services in Ghana",
+    template: "%s | Nii Plants Group",
   },
   description: siteDescription,
   keywords: [
-    "Niiplants Group",
+    "Nii Plants Group",
     "Ghana",
     "car rentals Ghana",
     "vehicle leasing Ghana",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     type: "website",
     siteName,
     url: siteUrl,
-    title: "Niiplants Group | Mobility, Hospitality & Business Services in Ghana",
+    title: "Nii Plants Group | Mobility, Hospitality & Business Services in Ghana",
     description: siteDescription,
     locale: "en_GH",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Niiplants Group",
+    title: "Nii Plants Group",
     description: siteDescription,
   },
   applicationName: siteName,

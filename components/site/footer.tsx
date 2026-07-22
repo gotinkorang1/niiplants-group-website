@@ -75,7 +75,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener"
-                    aria-label={`Niiplants Group on ${social.name} (opens in a new tab)`}
+                    aria-label={`Nii Plants Group on ${social.name} (opens in a new tab)`}
                     className="flex size-10 items-center justify-center rounded-full border border-paper-0/20 text-paper-0/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-500 hover:bg-accent-700 hover:text-paper-0"
                   >
                     {Icon && <Icon className="size-4" />}
@@ -140,7 +140,7 @@ export function Footer() {
 
       <div className="border-t border-paper-0/10">
         <Container className="flex flex-col items-start justify-between gap-3 py-6 text-sm text-paper-0/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Niiplants Group. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Nii Plants Group. All rights reserved.</p>
           <p className="text-paper-0/40">Mobility · Hospitality · Business Services</p>
         </Container>
       </div>

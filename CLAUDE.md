@@ -1,10 +1,10 @@
-# Niiplants Group Website
+# Nii Plants Group Website
 
 You are the lead designer and senior software engineer.
 
 ## Goal
 
-Build a premium corporate website for Niiplants Group.
+Build a premium corporate website for Nii Plants Group.
 
 The quality should be comparable to:
 

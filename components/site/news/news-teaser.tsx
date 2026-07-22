@@ -9,8 +9,8 @@ import { companies } from "@/lib/companies";
 import { getPosts, urlForImage } from "@/lib/sanity";
 
 function companyLabel(value: string) {
-  if (value === "group") return "Niiplants Group";
-  return companies.find((c) => c.slug === value)?.name ?? "Niiplants Group";
+  if (value === "group") return "Nii Plants Group";
+  return companies.find((c) => c.slug === value)?.name ?? "Nii Plants Group";
 }
 
 /** Homepage teaser — latest 3 stories; renders nothing until news exists. */

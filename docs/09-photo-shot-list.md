@@ -33,7 +33,7 @@ These carry the whole site. Worth the most care.
 
 ## Priority 2 — Per-company coverage
 
-**Niiplants and Car Rentals** — key handover to a customer; driver in
+**Nii Plants and Car Rentals** — key handover to a customer; driver in
 neat attire opening a door for a passenger; airport pickup scene;
 close-up of a clean dashboard/interior.
 
@@ -44,7 +44,7 @@ signing/handshake across a desk (faces optional); fleet keys on a board.
 work close-up; suspension/brake work; the team standing in front of the
 workshop (this doubles for Careers).
 
-**Niiplants Logistics** — loading or unloading cargo; truck cab from a
+**Nii Plants Logistics** — loading or unloading cargo; truck cab from a
 low angle; warehouse shelving/pallets if available.
 
 **Plantsville Residences** — every room type (wide corner shot from

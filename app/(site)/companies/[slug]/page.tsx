@@ -34,12 +34,12 @@ export async function generateMetadata({
       data.company.name,
       `${data.company.sector} Ghana`,
       `${data.company.sector} Accra`,
-      "Niiplants Group",
+      "Nii Plants Group",
       ...data.detail.services.slice(0, 4).map((s) => `${s} Ghana`),
     ],
     alternates: { canonical: `/companies/${slug}` },
     openGraph: {
-      title: `${data.company.name} | Niiplants Group`,
+      title: `${data.company.name} | Nii Plants Group`,
       description: data.company.descriptor,
       url: `/companies/${slug}`,
       type: "website",
@@ -83,7 +83,7 @@ export default async function CompanyPage({
       name: company.name,
       description: company.descriptor,
       url: company.externalUrl ?? `${siteUrl}/companies/${company.slug}`,
-      parentOrganization: { "@type": "Organization", name: "Niiplants Group", url: siteUrl },
+      parentOrganization: { "@type": "Organization", name: "Nii Plants Group", url: siteUrl },
       ...(detail.location
         ? {
             address: {
@@ -169,7 +169,7 @@ export default async function CompanyPage({
                 style={{ backgroundColor: `var(--color-sector-${company.tint})` }}
                 aria-hidden="true"
               />
-              Part of Niiplants Group
+              Part of Nii Plants Group
             </p>
             <h1 className="text-h1 font-display max-w-3xl text-balance">{company.name}</h1>
             <p className="mt-5 max-w-2xl text-body-lg text-paper-0/80">{company.descriptor}</p>

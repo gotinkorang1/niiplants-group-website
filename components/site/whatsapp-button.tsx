@@ -22,7 +22,7 @@ export function WhatsAppButton() {
   const [hovered, setHovered] = React.useState(false);
 
   const message = encodeURIComponent(
-    "Hello Niiplants Group, I'd like to make an enquiry.",
+    "Hello Nii Plants Group, I'd like to make an enquiry.",
   );
 
   return (

@@ -3,7 +3,7 @@
 ## Strategic context
 
 This site needs to rank for two very different query types simultaneously:
-1. **Group/brand queries** — "Niiplants Group," "Niiplants Ghana."
+1. **Group/brand queries** — "Nii Plants Group," "Niiplants Ghana."
 2. **Category + local queries** per subsidiary — "car rental Accra," "logistics
    company Ghana," "office supplies Accra," etc. — where the site is
    competing against category specialists, not other conglomerates.
@@ -16,9 +16,9 @@ microsites.
 
 ## Technical SEO checklist
 
-- **Meta titles**: `{Subsidiary Name} | Niiplants Group` pattern for
-  subsidiary pages (e.g. "Car Rentals | Niiplants Group"); group pages use
-  `{Page} | Niiplants Group`. Keep under 60 characters.
+- **Meta titles**: `{Subsidiary Name} | Nii Plants Group` pattern for
+  subsidiary pages (e.g. "Car Rentals | Nii Plants Group"); group pages use
+  `{Page} | Nii Plants Group`. Keep under 60 characters.
 - **Meta descriptions**: unique per page, derived from the one-sentence
   descriptors in [04-content.md](04-content.md), under 155 characters,
   written to be clicked (include the category + location), not just
@@ -74,9 +74,9 @@ microsites.
 
 | Company | Example target queries |
 |---|---|
-| Niiplants and Car Rentals | "car rental Accra," "corporate car hire Ghana," "rent a car Ghana daily/weekly" |
+| Nii Plants and Car Rentals | "car rental Accra," "corporate car hire Ghana," "rent a car Ghana daily/weekly" |
 | Plantsville Residences | "serviced apartment Dansoman," "short stay apartment Accra" |
-| Niiplants Logistics | "logistics company Ghana," "freight haulage Accra" |
+| Nii Plants Logistics | "logistics company Ghana," "freight haulage Accra" |
 | Trivoxo Limited Company | "travel agency Ghana," "flight ticketing Accra," "tour operator Ghana" |
 | NPL Automobile | "car servicing Accra," "vehicle repair Ghana" |
 | Puffs Ghana | "restaurant [city/area] Ghana" — needs the actual cuisine/location once the site is verified |

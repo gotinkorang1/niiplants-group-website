@@ -2,7 +2,7 @@
 
 ## What this is
 
-The corporate website for **Niiplants Group**, a diversified Ghanaian business
+The corporate website for **Nii Plants Group**, a diversified Ghanaian business
 group. This is not a marketing site for a single product — it is the group's
 digital headquarters: the place investors, partners, regulators, job
 candidates, and customers of any subsidiary go to understand who the group is,
@@ -10,22 +10,22 @@ what it operates, and why it can be trusted.
 
 ## The Group
 
-Niiplants Group is made up of eight companies:
+Nii Plants Group is made up of eight companies:
 
 | Sector | Company | Existing site | Status |
 |---|---|---|---|
-| Car Rentals | Niiplants and Car Rentals | [niiplantsghana.com](https://niiplantsghana.com) | Live |
+| Car Rentals | Nii Plants and Car Rentals | [niiplantsghana.com](https://niiplantsghana.com) | Live |
 | Hospitality / Real Estate | Plantsville Residences | — (no site yet) | To build in full on group site |
-| Logistics | Niiplants Logistics | [niiplantslogistics.com](https://niiplantslogistics.com/) | Live — **currently compromised, see below** |
+| Logistics | Nii Plants Logistics | [niiplantslogistics.com](https://niiplantslogistics.com/) | Live — **currently compromised, see below** |
 | Travel | Trivoxo Limited Company | [trivoxogh.com](https://trivoxogh.com/) | Live (behind a Cloudflare check I couldn't get past — verify content manually) |
 | Automotive | NPL Automobile | — (no site yet) | To build in full on group site |
 | Food | Puffs Ghana | [puffghana.com](https://puffghana.com/) | Did not load during my check — verify it's currently live |
 | Vehicle Leasing | Plants Greene Leasing | [plantsgreeneleasing.com](https://plantsgreeneleasing.com/) | Live |
 | Office Supplies | Papersource | — (no site yet) | To build in full on group site |
 
-Several of these companies are naturally adjacent (Niiplants and Car Rentals ↔
+Several of these companies are naturally adjacent (Nii Plants and Car Rentals ↔
 Plants Greene Leasing ↔ NPL Automobile; Trivoxo ↔ Plantsville Residences;
-Niiplants Logistics ↔ NPL Automobile fleet servicing), which gives the group a
+Nii Plants Logistics ↔ NPL Automobile fleet servicing), which gives the group a
 coherent "mobility, hospitality, and commerce" story rather than a random
 conglomerate of unrelated divisions. The site's narrative should lean into
 these adjacencies rather than presenting eight disconnected businesses.
@@ -39,7 +39,7 @@ these adjacencies rather than presenting eight disconnected businesses.
 > hosting access.
 
 > **[TBD — confirm with client]**: legal registration name of the parent
-> ("Niiplants Group" vs. a formal registered entity name — Trivoxo is
+> ("Nii Plants Group" vs. a formal registered entity name — Trivoxo is
 > confirmed as "Trivoxo Limited Company," implying each subsidiary may be
 > its own registered entity), founding year of the group, headquarters
 > address (Plantsville's address — Poultry Farm Avenue, Akokor Foto,
@@ -50,7 +50,7 @@ these adjacencies rather than presenting eight disconnected businesses.
 
 ## Positioning statement
 
-*Niiplants Group is Ghana's diversified partner for mobility, hospitality,
+*Nii Plants Group is Ghana's diversified partner for mobility, hospitality,
 and business services — bringing corporate-grade reliability to the
 services that keep organisations and travellers moving.*
 
@@ -97,7 +97,7 @@ and homepage IA, not by diluting either experience.
 
 ## Success criteria
 
-- A visitor unfamiliar with Niiplants Group understands, within one
+- A visitor unfamiliar with Nii Plants Group understands, within one
   homepage scroll, what the group is and what it operates.
 - A visitor looking for one specific subsidiary can reach that subsidiary's
   dedicated section in two clicks or fewer from any page.
@@ -115,7 +115,7 @@ and homepage IA, not by diluting either experience.
   — real photography and real facts carry the credibility.
 - Not attempting to duplicate booking/transaction flows that already exist on
   a subsidiary's own site. Confirmed architecture: **hub-and-spoke** — the
-  group site gives Niiplants and Car Rentals, Niiplants Logistics, Trivoxo,
+  group site gives Nii Plants and Car Rentals, Nii Plants Logistics, Trivoxo,
   Puffs Ghana, and Plants Greene Leasing an overview section that links out
   to their existing live domains for full detail/booking. Plantsville
   Residences, NPL Automobile, and Papersource have no existing site, so they

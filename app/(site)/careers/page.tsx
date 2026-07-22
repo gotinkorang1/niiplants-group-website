@@ -11,7 +11,7 @@ import { companyGroups, companiesByGroup } from "@/lib/companies";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Build your career across Niiplants Group's six companies — from logistics and vehicle leasing to travel, food, and corporate services in Ghana.",
+    "Build your career across Nii Plants Group's six companies — from logistics and vehicle leasing to travel, food, and corporate services in Ghana.",
   alternates: { canonical: "/careers" },
 };
 
@@ -39,7 +39,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Do work that keeps Ghana moving."
-        lede="Across mobility, travel, and business services, Niiplants Group hires people who take service seriously — and gives them room to grow across six companies."
+        lede="Across mobility, travel, and business services, Nii Plants Group hires people who take service seriously — and gives them room to grow across six companies."
       />
 
       {/* Why work here */}

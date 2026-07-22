@@ -2,7 +2,7 @@
 
 ## Brand architecture: endorsed, not merged
 
-Niiplants Group uses an **endorsed brand model** (the same pattern Marriott
+Nii Plants Group uses an **endorsed brand model** (the same pattern Marriott
 uses across its hotel brands, or Dangote across cement/sugar/foods): the
 group identity provides trust and a visual "house style," while each
 subsidiary keeps its own name and enough visual identity to feel like a
@@ -10,7 +10,7 @@ specialist in its own right.
 
 In practice:
 
-- The **group mark** (Niiplants Group) anchors the main navigation, footer,
+- The **group mark** (Nii Plants Group) anchors the main navigation, footer,
   legal pages, About/Governance, and Careers.
 - Each **subsidiary** gets its own name, its own hero imagery, and — once
   branded assets exist — potentially its own accent color drawn from a
@@ -18,15 +18,15 @@ In practice:
   It does not get its own typeface, logo lockup style, or layout system —
   those stay consistent so the site never feels like eight different
   vendors stitched together.
-- Every subsidiary page carries a consistent "Part of Niiplants Group"
+- Every subsidiary page carries a consistent "Part of Nii Plants Group"
   endorsement mark near the top, so a visitor arriving directly at a
   subsidiary via search still understands the parent relationship
   immediately.
-- Five companies — Niiplants and Car Rentals, Niiplants Logistics, Trivoxo
+- Five companies — Nii Plants and Car Rentals, Nii Plants Logistics, Trivoxo
   Limited Company, Puffs Ghana, and Plants Greene Leasing — already have
   live sites with their own visual choices (Plants Greene Leasing, for
   instance, already has real mission/vision copy and a distinctive stated
-  core value around professionalism; Niiplants and Car Rentals already has
+  core value around professionalism; Nii Plants and Car Rentals already has
   real testimonials and named staff). The group site's overview pages for
   these five (see [05-pages.md](05-pages.md)) should feel like the same
   family without contradicting what's already live — reuse their real
@@ -45,8 +45,8 @@ In practice:
 > paper/brass system (see [03-design-system.md](03-design-system.md)) carry
 > the group-level pages (nav chrome, footer, About, Careers, Contact).
 >
-> **[TBD — client input]**: the Niiplants Group master logo itself, and
-> logos for Niiplants and Car Rentals and Papersource (not yet seen in any
+> **[TBD — client input]**: the Nii Plants Group master logo itself, and
+> logos for Nii Plants and Car Rentals and Papersource (not yet seen in any
 > form). Also still need the actual image files (not pasted screenshots) at
 > production resolution for every company, ideally as SVG or transparent
 > PNG.

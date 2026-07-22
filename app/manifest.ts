@@ -5,7 +5,7 @@ import { siteDescription, siteName } from "@/lib/site";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteName,
-    short_name: "Niiplants",
+    short_name: "Nii Plants",
     description: siteDescription,
     start_url: "/",
     display: "standalone",

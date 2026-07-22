@@ -13,7 +13,7 @@ import { whatsappNumber } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Niiplants Group or reach any of its six companies directly — car rentals, leasing, logistics, travel, food, and office supplies.",
+    "Contact Nii Plants Group or reach any of its six companies directly — car rentals, leasing, logistics, travel, food, and office supplies.",
   alternates: { canonical: "/contact" },
 };
 

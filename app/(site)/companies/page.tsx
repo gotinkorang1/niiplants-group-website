@@ -13,7 +13,7 @@ import { siteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our Companies",
   description:
-    "All 6 Niiplants Group companies — car rentals, vehicle leasing, logistics, travel, food, and office supplies.",
+    "All 6 Nii Plants Group companies — car rentals, vehicle leasing, logistics, travel, food, and office supplies.",
   alternates: { canonical: "/companies" },
 };
 
@@ -23,7 +23,7 @@ export default function CompaniesPage() {
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: "Niiplants Group companies",
+      name: "Nii Plants Group companies",
       numberOfItems: companies.length,
       itemListElement: companies.map((company, index) => ({
         "@type": "ListItem",

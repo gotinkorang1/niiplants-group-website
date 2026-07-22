@@ -20,7 +20,7 @@ export function Testimonial() {
           <div className="mt-8 flex items-center justify-center gap-3">
             <span className="inline-block h-px w-8 bg-accent-500" aria-hidden="true" />
             <p className="text-sm text-ink-500">
-              Gershon Navada · Client, Niiplants and Car Rentals
+              Gershon Navada · Client, Nii Plants and Car Rentals
             </p>
             <span className="inline-block h-px w-8 bg-accent-500" aria-hidden="true" />
           </div>

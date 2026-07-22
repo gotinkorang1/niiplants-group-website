@@ -13,7 +13,7 @@ import { getPosts, urlForImage } from "@/lib/sanity";
 export const metadata: Metadata = {
   title: "Newsroom",
   description:
-    "News, announcements, and updates from Niiplants Group and its six companies.",
+    "News, announcements, and updates from Nii Plants Group and its six companies.",
   alternates: { canonical: "/newsroom" },
 };
 
@@ -27,7 +27,7 @@ function toCard(post: Awaited<ReturnType<typeof getPosts>>[number]): NewsCard {
     title: post.title,
     excerpt: post.excerpt,
     company: post.company,
-    companyLabel: post.company === "group" ? "Niiplants Group" : company?.name ?? "Niiplants Group",
+    companyLabel: post.company === "group" ? "Nii Plants Group" : company?.name ?? "Nii Plants Group",
     tintColor: company ? `var(--color-sector-${company.tint})` : "var(--color-accent-500)",
     date: new Date(post.publishedAt).toLocaleDateString("en-GB", {
       day: "numeric",
@@ -52,7 +52,7 @@ export default async function NewsroomPage() {
       <PageHero
         eyebrow="Newsroom"
         title="News from across the group."
-        lede="Announcements, milestones, and updates from Niiplants Group and its companies."
+        lede="Announcements, milestones, and updates from Nii Plants Group and its companies."
       />
 
       {posts.length === 0 ? (

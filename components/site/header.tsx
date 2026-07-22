@@ -65,7 +65,7 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between">
         <Link
           href="/"
-          aria-label="Niiplants Group — home"
+          aria-label="Nii Plants Group — home"
           className={cn(
             "transition-colors duration-300",
             solid ? "text-ink-900" : "text-paper-0",

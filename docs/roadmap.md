@@ -91,8 +91,8 @@
 ## Open decisions blocking full plan confidence
 
 **Resolved**: site architecture is **hub-and-spoke** — overview + link-out
-pages for the 5 companies with existing sites (Niiplants and Car Rentals,
-Niiplants Logistics, Trivoxo, Puffs Ghana, Plants Greene Leasing), full
+pages for the 5 companies with existing sites (Nii Plants and Car Rentals,
+Nii Plants Logistics, Trivoxo, Puffs Ghana, Plants Greene Leasing), full
 self-contained pages for the 3 that don't (Plantsville Residences, NPL
 Automobile, Papersource). See [05-pages.md](05-pages.md).
 
@@ -101,14 +101,14 @@ Still open — flagged inline in the relevant doc:
    — e.g. group HQ address vs. Plantsville's address, founding year,
    headcount.
 2. Brand assets — **partially resolved**: real logos have been seen (as
-   pasted chat images) for Trivoxo, Niiplants Logistics, Plants Greene
+   pasted chat images) for Trivoxo, Nii Plants Logistics, Plants Greene
    Leasing, Plantsville Residences, NPL Automobile, and Puffs Ghana, and
    their colors are now reflected in [03-design-system.md](03-design-system.md)
    and `app/globals.css` — but only eyeballed, not pixel-sampled. **Still
    need**: (a) the actual image files at production resolution (SVG or
    transparent PNG), since pasted chat images can't be placed into the
-   codebase directly; (b) logos for Niiplants and Car Rentals and
-   Papersource, not yet seen in any form; (c) the Niiplants Group master
+   codebase directly; (b) logos for Nii Plants and Car Rentals and
+   Papersource, not yet seen in any form; (c) the Nii Plants Group master
    logo itself — still undefined.
 3. Placement of real logos in the built site depends on (2) landing as
    actual files — send them individually (e.g. via a shared drive link, or

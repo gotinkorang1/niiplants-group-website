@@ -20,8 +20,8 @@ import { siteUrl } from "@/lib/site";
 export const revalidate = 60;
 
 function companyLabel(value: string) {
-  if (value === "group") return "Niiplants Group";
-  return companies.find((c) => c.slug === value)?.name ?? "Niiplants Group";
+  if (value === "group") return "Nii Plants Group";
+  return companies.find((c) => c.slug === value)?.name ?? "Nii Plants Group";
 }
 
 function formatDate(iso: string) {
@@ -161,7 +161,7 @@ export default async function ArticlePage({
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
-    publisher: { "@type": "Organization", name: "Niiplants Group", url: siteUrl },
+    publisher: { "@type": "Organization", name: "Nii Plants Group", url: siteUrl },
     mainEntityOfPage: articleUrl,
   };
 

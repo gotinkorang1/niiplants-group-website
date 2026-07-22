@@ -41,7 +41,7 @@ strip, not a full restatement.
 3. **Sector showcase** — grid of all 8 subsidiaries, each with name, a
    one-sentence descriptor (see below), and a link into that subsidiary's
    section/page.
-4. **Why Niiplants Group** — 3 messaging-pillar callouts (Trust, Scale,
+4. **Why Nii Plants Group** — 3 messaging-pillar callouts (Trust, Scale,
    Stability) backed by one concrete proof point each — not generic icon
    copy.
 5. **Featured subsidiary spotlight** — rotating or editorially-chosen deep
@@ -69,7 +69,7 @@ Company names and facts below are confirmed by the client or by directly
 checking each live site; anything still uncertain is marked. Wording is
 still draft copy to be approved, but the facts underneath it are real.
 
-- **Niiplants and Car Rentals** — "Short-term vehicle rental — by the
+- **Nii Plants and Car Rentals** — "Short-term vehicle rental — by the
   day, week, or month — from a fleet spanning sedans, SUVs, 4x4s, and
   coaster buses." *(Confirmed fleet on site includes Kia Pegas/Cerato/
   Seltos/Sportage, Hyundai Accent/Elantra/Accord/Creta/Tucson, Mitsubishi
@@ -77,7 +77,7 @@ still draft copy to be approved, but the facts underneath it are real.
 - **Plantsville Residences** — "Serviced apartments in Dansoman, Accra,
   with 24-hour security, uninterrupted power and water, and free Wi-Fi in
   every room."
-- **Niiplants Logistics** — "Freight and haulage services that keep goods
+- **Nii Plants Logistics** — "Freight and haulage services that keep goods
   moving reliably across Ghana." *(Site copy currently reads "Taking
   Logistics to Another Level" / "moving things from point A to point B" —
   thin content, and the site is presently compromised with spam injection;
@@ -122,9 +122,9 @@ still draft copy to be approved, but the facts underneath it are real.
 Because several companies are naturally adjacent, every subsidiary page
 should surface 1–2 relevant sibling links in context, not as a generic
 "other services" list:
-- Niiplants and Car Rentals ↔ Plants Greene Leasing ↔ NPL Automobile
+- Nii Plants and Car Rentals ↔ Plants Greene Leasing ↔ NPL Automobile
 - Trivoxo (travel/tour) ↔ Plantsville Residences (stay once you arrive)
-- Niiplants Logistics ↔ NPL Automobile (fleet servicing)
+- Nii Plants Logistics ↔ NPL Automobile (fleet servicing)
 
 This reinforces the "one group, coherent portfolio" narrative from
 [01-project-overview.md](01-project-overview.md) instead of presenting

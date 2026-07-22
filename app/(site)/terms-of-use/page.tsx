@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms governing the use of the Niiplants Group website.",
+  description: "Terms governing the use of the Nii Plants Group website.",
 };
 
 /*
@@ -24,7 +24,7 @@ export default function TermsOfUsePage() {
               <h2 className="text-h3 font-display text-ink-900">Acceptance of these terms</h2>
               <p className="mt-3">
                 By using this website, you accept these terms of use. The site
-                is operated by Niiplants Group and provides information about
+                is operated by Nii Plants Group and provides information about
                 the group and its companies.
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function TermsOfUsePage() {
               <h2 className="text-h3 font-display text-ink-900">Intellectual property</h2>
               <p className="mt-3">
                 The names, logos, text, and imagery on this site belong to
-                Niiplants Group or its companies and may not be reproduced
+                Nii Plants Group or its companies and may not be reproduced
                 without permission, except for fair personal or journalistic
                 use.
               </p>

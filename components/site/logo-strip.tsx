@@ -9,8 +9,8 @@ import { Container } from "@/components/site/container";
  * marquee). Papersource's logo is still pending from the client.
  */
 const logos = [
-  { src: "/logo/niiplants-car-rentals.png", alt: "Niiplants and Car Rentals" },
-  { src: "/logo/niiplants-logistics.png", alt: "Niiplants Logistics" },
+  { src: "/logo/niiplants-car-rentals.png", alt: "Nii Plants and Car Rentals" },
+  { src: "/logo/niiplants-logistics.png", alt: "Nii Plants Logistics" },
   { src: "/logo/plants-greene.png", alt: "Plants Greene Leasing" },
   { src: "/logo/trivoxo.png", alt: "Trivoxo Limited Company" },
   { src: "/logo/puffs-ghana.png", alt: "Puffs Ghana" },
@@ -22,7 +22,7 @@ export function LogoStrip() {
       <Container>
         <Reveal>
           <p className="text-label uppercase tracking-wide text-ink-500 text-center mb-10">
-            The companies of Niiplants Group
+            The companies of Nii Plants Group
           </p>
         </Reveal>
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-10">

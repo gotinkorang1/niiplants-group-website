@@ -21,10 +21,10 @@ function resolveSiteUrl(): string {
 
 export const siteUrl = resolveSiteUrl();
 
-export const siteName = "Niiplants Group";
+export const siteName = "Nii Plants Group";
 
 export const siteDescription =
-  "Niiplants Group is a diversified Ghanaian business group — six companies across car rentals, vehicle leasing, logistics, travel, food, and office supplies.";
+  "Nii Plants Group is a diversified Ghanaian business group — six companies across car rentals, vehicle leasing, logistics, travel, food, and office supplies.";
 
 /**
  * WhatsApp number in international format, no "+" or spaces.

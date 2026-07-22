@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Niiplants Group — a diversified Ghanaian business group across mobility, hospitality, and business services";
+  "Nii Plants Group — a diversified Ghanaian business group across mobility, hospitality, and business services";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -48,7 +48,7 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ width: 56, height: 2, background: "#b79452", display: "flex" }} />
-          Niiplants Group · Ghana
+          Nii Plants Group · Ghana
         </div>
         <div
           style={{

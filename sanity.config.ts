@@ -12,7 +12,7 @@ export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
 /** Embedded Sanity Studio config — served at /studio on this site. */
 export default defineConfig({
   name: "niiplants-group",
-  title: "Niiplants Group Newsroom",
+  title: "Nii Plants Group Newsroom",
   basePath: "/studio",
   projectId,
   dataset,

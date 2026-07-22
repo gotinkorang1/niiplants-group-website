@@ -15,7 +15,7 @@ import { companyGroups, companiesByGroup } from "@/lib/companies";
 export const metadata: Metadata = {
   title: "About the Group",
   description:
-    "Niiplants Group is a diversified Ghanaian business group — six companies across mobility, travel, and business services, one standard of reliability.",
+    "Nii Plants Group is a diversified Ghanaian business group — six companies across mobility, travel, and business services, one standard of reliability.",
   alternates: { canonical: "/about" },
 };
 
@@ -59,7 +59,7 @@ const leadership = [
 const awards = [
   {
     src: "/awards/ceo-receiving-award.jpg",
-    alt: "Niiplants representative receiving an award on stage at the National Tourism Awards",
+    alt: "Nii Plants representative receiving an award on stage at the National Tourism Awards",
     caption: "On stage at the National Tourism Awards.",
     wide: true,
   },
@@ -71,7 +71,7 @@ const awards = [
   },
   {
     src: "/awards/award-trophy-1.jpg",
-    alt: "Niiplants team holding a trophy at the National Tourism Awards",
+    alt: "Nii Plants team holding a trophy at the National Tourism Awards",
     caption: "Receiving honours at the National Tourism Awards.",
     wide: false,
   },
@@ -83,7 +83,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About the Group"
         title="Built in Ghana. Built to be depended on."
-        lede="Founded in Ghana, Niiplants Group has grown into a diversified group of six companies delivering reliable services across mobility, travel, and business services — for individuals, corporations, and government institutions."
+        lede="Founded in Ghana, Nii Plants Group has grown into a diversified group of six companies delivering reliable services across mobility, travel, and business services — for individuals, corporations, and government institutions."
       />
 
       {/* Story */}
@@ -98,7 +98,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal className="lg:col-span-7 flex flex-col gap-6 text-body-lg text-ink-500" delay={0.08}>
             <p>
-              Niiplants Group did not set out to be a conglomerate of unrelated
+              Nii Plants Group did not set out to be a conglomerate of unrelated
               businesses. Each company was built to answer a need the group saw
               up close — vehicles that companies could rent rather than buy,
               fleets that needed leasing and maintenance, goods that needed
@@ -166,7 +166,7 @@ export default function AboutPage() {
         alt="Freight truck at a container port at sunset"
         eyebrow="Our reach"
         title="Six companies. One operating standard."
-        body="From vehicles and freight to residences and supplies, every Niiplants company is run to the same standard of reliability."
+        body="From vehicles and freight to residences and supplies, every Nii Plants company is run to the same standard of reliability."
         cta={{ href: "/companies", label: "Explore our companies" }}
       />
 
@@ -186,7 +186,7 @@ export default function AboutPage() {
                   <div className="relative aspect-[3/4] overflow-hidden">
                     <Image
                       src={person.src}
-                      alt={`${person.name}, ${person.role}, Niiplants Group`}
+                      alt={`${person.name}, ${person.role}, Nii Plants Group`}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
                       className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"

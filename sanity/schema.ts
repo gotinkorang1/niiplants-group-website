@@ -37,7 +37,7 @@ export const post = defineType({
       type: "string",
       options: {
         list: [
-          { title: "Niiplants Group (all companies)", value: "group" },
+          { title: "Nii Plants Group (all companies)", value: "group" },
           ...companies.map((c) => ({ title: c.name, value: c.slug })),
         ],
         layout: "dropdown",

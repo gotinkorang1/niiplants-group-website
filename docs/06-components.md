@@ -53,7 +53,7 @@ built as a reusable component reading from the design tokens in
   but must still render as a real link (`<a>`) for accessibility/SEO, not
   a `div` with a click handler.
 
-### Pillar callout (Why Niiplants Group)
+### Pillar callout (Why Nii Plants Group)
 - 3-up row: short label (e.g. "Trust"), one supporting sentence with a
   concrete proof point, no icon-in-a-circle cliché — a small numeral or
   understated line mark instead.
@@ -68,7 +68,7 @@ built as a reusable component reading from the design tokens in
 
 ### Subsidiary hero
 - Same structural component as homepage hero but shorter (50–60vh),
-  includes the "Part of Niiplants Group" endorsement lockup above the
+  includes the "Part of Nii Plants Group" endorsement lockup above the
   headline.
 
 ### Services/offering grid
@@ -87,15 +87,15 @@ built as a reusable component reading from the design tokens in
   to a contact/quote form.
 
 ### External-link CTA (hub-and-spoke pages only)
-- Used on the 5 "type A" subsidiary pages (Niiplants and Car Rentals,
-  Niiplants Logistics, Trivoxo, Puffs Ghana, Plants Greene Leasing — see
+- Used on the 5 "type A" subsidiary pages (Nii Plants and Car Rentals,
+  Nii Plants Logistics, Trivoxo, Puffs Ghana, Plants Greene Leasing — see
   [05-pages.md](05-pages.md)) as the primary action, since the real
   destination is an external domain, not this site.
 - Visually a primary button, but always paired with a small external-link
   icon and `target="_blank" rel="noopener"`, plus a visually-hidden
   accessible suffix so screen reader users get the same signal sighted
   users get from the icon: `<a href="…" target="_blank" rel="noopener">
-  Visit Niiplants and Car Rentals<span class="sr-only"> (opens in a new
+  Visit Nii Plants and Car Rentals<span class="sr-only"> (opens in a new
   tab)</span></a>`.
 - Never disguise this as an internal link — no icon-less button copy like
   plain "Book now" that silently leaves the site. Label always names the

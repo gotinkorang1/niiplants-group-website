@@ -26,7 +26,7 @@ export function PillarCallouts() {
         <Reveal className="max-w-2xl">
           <p className="text-label uppercase tracking-wide text-accent-700 mb-4 flex items-center gap-3">
             <span className="inline-block h-px w-10 bg-accent-700" aria-hidden="true" />
-            Why Niiplants Group
+            Why Nii Plants Group
           </p>
           <h2 className="text-h2 font-display text-ink-900 text-balance">
             Built to be depended on.

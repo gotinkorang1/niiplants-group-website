@@ -40,7 +40,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
   "car-rentals": {
     slug: "car-rentals",
     intro:
-      "Niiplants and Car Rentals puts a professionally maintained fleet at your disposal — by the day, the week, or the month. From airport pickups to ongoing corporate transportation, every vehicle is professionally maintained and every booking is handled by people who run fleets for a living.",
+      "Nii Plants and Car Rentals puts a professionally maintained fleet at your disposal — by the day, the week, or the month. From airport pickups to ongoing corporate transportation, every vehicle is professionally maintained and every booking is handled by people who run fleets for a living.",
     servicesLabel: "Services",
     services: [
       "Daily rentals",
@@ -115,7 +115,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
           "Our rental vehicles are for use within Ghana; crossing international borders is not permitted.",
       },
     ],
-    ctaLabel: "Visit Niiplants and Car Rentals",
+    ctaLabel: "Visit Nii Plants and Car Rentals",
     youtubePlaylist: "UUgqE5Gwju32f7Quf6P0-DFg",
     youtubeChannelUrl: "https://www.youtube.com/@niiplantscarrental867",
     crossLinks: ["vehicle-leasing", "logistics"],
@@ -158,7 +158,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
   logistics: {
     slug: "logistics",
     intro:
-      "Niiplants Logistics moves goods reliably across Ghana — from same-city deliveries to nationwide distribution. Corporate clients get a single accountable partner for transport, warehousing, and distribution, running on a professionally maintained fleet.",
+      "Nii Plants Logistics moves goods reliably across Ghana — from same-city deliveries to nationwide distribution. Corporate clients get a single accountable partner for transport, warehousing, and distribution, running on a professionally maintained fleet.",
     servicesLabel: "Services",
     services: [
       "Local delivery",
@@ -198,7 +198,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "Connected to air and sea freight.",
       },
     ],
-    ctaLabel: "Visit Niiplants Logistics",
+    ctaLabel: "Visit Nii Plants Logistics",
     crossLinks: ["car-rentals", "office-supplies"],
   },
   travel: {

@@ -8,7 +8,7 @@ import { GalleryGrid, type GalleryItem } from "@/components/site/gallery-grid";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photographs from across Niiplants Group — fleets, logistics, travel, food, and our people.",
+    "Photographs from across Nii Plants Group — fleets, logistics, travel, food, and our people.",
   alternates: { canonical: "/gallery" },
 };
 
@@ -17,7 +17,7 @@ const items: GalleryItem[] = [
   {
     src: "/photos/rentals-key-handover.jpg",
     alt: "Chauffeur handing vehicle keys to a client",
-    caption: "Key handover — Niiplants and Car Rentals",
+    caption: "Key handover — Nii Plants and Car Rentals",
     category: "mobility",
     categoryLabel: "Mobility",
   },
@@ -200,7 +200,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="The group at work."
-        lede="Fleets, freight, travel, and the people behind them — a look across Niiplants Group."
+        lede="Fleets, freight, travel, and the people behind them — a look across Nii Plants Group."
       />
 
       <section className="py-16 md:py-24">

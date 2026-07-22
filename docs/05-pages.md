@@ -11,9 +11,9 @@ the group site instead, since they have nowhere else to send anyone.
 
 | Company | Page type on group site |
 |---|---|
-| Niiplants and Car Rentals | Overview → links out to [niiplantsghana.com](https://niiplantsghana.com) |
+| Nii Plants and Car Rentals | Overview → links out to [niiplantsghana.com](https://niiplantsghana.com) |
 | Plantsville Residences | Full page (no existing site) |
-| Niiplants Logistics | Overview → links out to [niiplantslogistics.com](https://niiplantslogistics.com/) *(hold this link until the spam-injection issue flagged in [01-project-overview.md](01-project-overview.md) is resolved)* |
+| Nii Plants Logistics | Overview → links out to [niiplantslogistics.com](https://niiplantslogistics.com/) *(hold this link until the spam-injection issue flagged in [01-project-overview.md](01-project-overview.md) is resolved)* |
 | Trivoxo Limited Company | Overview → links out to [trivoxogh.com](https://trivoxogh.com/) |
 | NPL Automobile | Full page (no existing site) |
 | Puffs Ghana | Overview → links out to [puffghana.com](https://puffghana.com/) *(confirm the domain is currently live before launch — it didn't load during my check)* |
@@ -28,9 +28,9 @@ the group site instead, since they have nowhere else to send anyone.
 │   ├── leadership/             (optional, if bios available)
 │   └── sustainability/         (optional — common on peer/reference sites)
 ├── companies/                  (Index — grid of all 8 companies)
-│   ├── car-rentals/            (overview + link out — Niiplants and Car Rentals)
+│   ├── car-rentals/            (overview + link out — Nii Plants and Car Rentals)
 │   ├── plantsville-residences/ (full page)
-│   ├── logistics/              (overview + link out — Niiplants Logistics)
+│   ├── logistics/              (overview + link out — Nii Plants Logistics)
 │   ├── travel/                 (overview + link out — Trivoxo Limited Company)
 │   ├── automotive/              (full page — NPL Automobile)
 │   ├── food/                    (overview + link out — Puffs Ghana)
@@ -49,7 +49,7 @@ literal company name) rather than as top-level routes, so the URL
 structure itself communicates "part of the group" and stays stable even if
 a company is later rebranded (also better for SEO — see
 [07-seo.md](07-seo.md)). The visible company name and branding on the page
-is the real one (e.g. "Niiplants and Car Rentals," "Plants Greene
+is the real one (e.g. "Nii Plants and Car Rentals," "Plants Greene
 Leasing") — only the URL slug is generic.
 
 ## Page specs
@@ -76,8 +76,8 @@ Leasing") — only the URL slug is generic.
   business services), then 8-card grid using the one-sentence descriptors
   from [04-content.md](04-content.md), grouped visually by natural
   adjacency rather than a flat unordered grid:
-  - **Mobility**: Niiplants and Car Rentals, Plants Greene Leasing,
-    NPL Automobile, Niiplants Logistics
+  - **Mobility**: Nii Plants and Car Rentals, Plants Greene Leasing,
+    NPL Automobile, Nii Plants Logistics
   - **Hospitality & Travel**: Plantsville Residences, Trivoxo Limited
     Company
   - **Business Services**: Puffs Ghana, Papersource
@@ -86,7 +86,7 @@ Leasing") — only the URL slug is generic.
   vs. type B pages, see below).
 
 ### Subsidiary page, type A — overview + link out (`/companies/[sector]/`)
-Applies to: Niiplants and Car Rentals, Niiplants Logistics, Trivoxo,
+Applies to: Nii Plants and Car Rentals, Nii Plants Logistics, Trivoxo,
 Puffs Ghana, Plants Greene Leasing.
 - **Purpose**: Establish group endorsement and give enough real
   information to be useful and to rank on its own for category+local
@@ -94,11 +94,11 @@ Puffs Ghana, Plants Greene Leasing.
   ordering/detail — without duplicating that site's content wholesale
   (see the duplicate-content note in [07-seo.md](07-seo.md)).
 - **Sections**:
-  1. Hero — company name, "Part of Niiplants Group" endorsement,
+  1. Hero — company name, "Part of Nii Plants Group" endorsement,
      one-line descriptor, photography specific to that company.
   2. What we do — 2–3 sentence overview, written distinctly from the
      existing site's own copy.
-  3. Highlights — 3–4 concrete facts (e.g. Niiplants and Car Rentals'
+  3. Highlights — 3–4 concrete facts (e.g. Nii Plants and Car Rentals'
      actual fleet categories: sedans, SUVs, 4x4s, coaster buses) — not a
      full service catalogue, since that lives on the existing site.
   4. Proof — a testimonial or stat if available (Niiplants and Car
@@ -119,7 +119,7 @@ destination.
 - **Purpose**: Be the actual sales/info page for a company with no other
   web presence.
 - **Sections**:
-  1. Hero — company name, "Part of Niiplants Group" endorsement,
+  1. Hero — company name, "Part of Nii Plants Group" endorsement,
      one-line descriptor, hero photography.
   2. What we do — 2–3 sentence overview.
   3. Services/offering grid — e.g. Plantsville Residences: the 5 units
@@ -161,7 +161,7 @@ destination.
 - **Purpose**: Single directory for every way to reach the group and each
   company — reduces "which number do I call" friction.
 - **Sections**: Group HQ contact, map/location, then a per-company contact
-  table (phone/email/location if distinct). Niiplants and Car Rentals'
+  table (phone/email/location if distinct). Nii Plants and Car Rentals'
   confirmed numbers/email (`0302441805 / 0593835941`,
   `rental@niiplantsghana.com`) can seed this table now; the rest need
   confirming with the client.

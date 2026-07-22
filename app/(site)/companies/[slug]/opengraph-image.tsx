@@ -5,7 +5,7 @@ import { companies } from "@/lib/companies";
 export const runtime = "edge";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Company overview — Niiplants Group";
+export const alt = "Company overview — Nii Plants Group";
 
 /** Sector tint hexes mirrored from app/globals.css (CSS vars are unavailable in edge OG rendering). */
 const tintHex: Record<string, string> = {
@@ -31,7 +31,7 @@ export default async function OpengraphImage({
 }) {
   const { slug } = await params;
   const company = companies.find((c) => c.slug === slug);
-  const name = company?.name ?? "Niiplants Group";
+  const name = company?.name ?? "Nii Plants Group";
   const sector = company?.sector ?? "Diversified services";
   const descriptor = company?.descriptor ?? "";
   const tint = tintHex[company?.tint ?? ""] ?? "#b79452";
@@ -76,7 +76,7 @@ export default async function OpengraphImage({
           }}
         >
           <div style={{ width: 56, height: 3, background: tint, display: "flex" }} />
-          Part of Niiplants Group · {sector}
+          Part of Nii Plants Group · {sector}
         </div>
         <div
           style={{

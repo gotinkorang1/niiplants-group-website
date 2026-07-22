@@ -34,7 +34,7 @@ export function Clients() {
             Trusted by leading organisations.
           </h2>
           <p className="mt-4 text-body-lg text-ink-500">
-            Multinationals, institutions, and agencies rely on Niiplants Group
+            Multinationals, institutions, and agencies rely on Nii Plants Group
             companies every day.
           </p>
         </Reveal>

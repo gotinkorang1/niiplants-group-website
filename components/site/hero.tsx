@@ -19,7 +19,7 @@ const slides = [
   },
   {
     src: "/photos/rentals-journey.jpg",
-    alt: "Clients travelling together in a Niiplants vehicle",
+    alt: "Clients travelling together in a Nii Plants vehicle",
     label: "Car rentals & leasing",
   },
   {
@@ -126,7 +126,7 @@ export function Hero() {
             className="text-label uppercase tracking-[0.3em] text-paper-0/70 mb-6 flex items-center gap-3"
           >
             <span className="inline-block h-px w-12 bg-accent-500" aria-hidden="true" />
-            Niiplants Group · Ghana
+            Nii Plants Group · Ghana
           </motion.p>
 
           <h1 className="font-display text-balance text-[clamp(2.5rem,1.2rem+5.2vw,5rem)] font-semibold leading-[1.04] tracking-tight">

@@ -5,7 +5,7 @@ import { Reveal } from "@/components/site/reveal";
 import { LiteYouTube } from "@/components/site/lite-youtube";
 import { RouteNetworkArt } from "@/components/site/brand-art";
 
-/** Uploads playlist of the Niiplants Car Rentals YouTube channel. */
+/** Uploads playlist of the Nii Plants Car Rentals YouTube channel. */
 export const NIIPLANTS_UPLOADS_PLAYLIST = "UUgqE5Gwju32f7Quf6P0-DFg";
 
 export function MediaShowcase() {
@@ -22,7 +22,7 @@ export function MediaShowcase() {
           </h2>
           <p className="mt-4 text-body-lg text-ink-500">
             Real vehicles, real journeys, real service — straight from the
-            Niiplants Car Rentals channel.
+            Nii Plants Car Rentals channel.
           </p>
         </Reveal>
 
@@ -30,7 +30,7 @@ export function MediaShowcase() {
           <Reveal className="lg:col-span-7">
             <LiteYouTube
               playlistId={NIIPLANTS_UPLOADS_PLAYLIST}
-              title="Niiplants Car Rentals — latest from the fleet"
+              title="Nii Plants Car Rentals — latest from the fleet"
             />
           </Reveal>
 

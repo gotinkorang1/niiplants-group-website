@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/page-hero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Niiplants Group collects, uses, and protects personal information.",
+  description: "How Nii Plants Group collects, uses, and protects personal information.",
 };
 
 /*
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="text-h3 font-display text-ink-900">Who we are</h2>
               <p className="mt-3">
-                Niiplants Group (&quot;we&quot;, &quot;us&quot;) is a
+                Nii Plants Group (&quot;we&quot;, &quot;us&quot;) is a
                 diversified Ghanaian business group headquartered in Accra,
                 Ghana. This policy explains how this website handles personal
                 information.
