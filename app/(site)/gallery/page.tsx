@@ -35,20 +35,6 @@ const items: GalleryItem[] = [
     category: "mobility",
     categoryLabel: "Mobility",
   },
-  {
-    src: "/photos/automotive-repair.jpg",
-    alt: "Technician working under the bonnet of a vehicle",
-    caption: "Fleet servicing",
-    category: "mobility",
-    categoryLabel: "Mobility",
-  },
-  {
-    src: "/photos/automotive-workshop.jpg",
-    alt: "Mechanic carrying out diagnostics in the workshop",
-    caption: "Diagnostics-led repairs",
-    category: "mobility",
-    categoryLabel: "Mobility",
-  },
 
   // Logistics
   {
@@ -94,41 +80,41 @@ const items: GalleryItem[] = [
     categoryLabel: "Logistics",
   },
 
-  // Travel & hospitality
+  // Travel
   {
     src: "/trivoxo/event-biking.webp",
     alt: "Trivoxo group biking tour on a ridge",
     caption: "Group biking tour — Trivoxo",
     category: "travel",
-    categoryLabel: "Travel & Hospitality",
+    categoryLabel: "Travel",
   },
   {
     src: "/trivoxo/event-hiking.webp",
     alt: "Trivoxo hiking event on a hillside trail",
     caption: "Adventure hiking experience — Trivoxo",
     category: "travel",
-    categoryLabel: "Travel & Hospitality",
+    categoryLabel: "Travel",
   },
   {
     src: "/photos/travel-harbour.jpg",
     alt: "Traveller reading a map at a harbour",
     caption: "Trips planned end to end",
     category: "travel",
-    categoryLabel: "Travel & Hospitality",
+    categoryLabel: "Travel",
   },
   {
     src: "/photos/travel-adventure.jpg",
     alt: "Traveller wearing a helmet before an adventure activity",
     caption: "Tours and experiences",
     category: "travel",
-    categoryLabel: "Travel & Hospitality",
+    categoryLabel: "Travel",
   },
   {
     src: "/photos/travel-traveller.jpg",
     alt: "Guest relaxing with headphones during a stay",
     caption: "Travel and stays arranged by Trivoxo",
     category: "travel",
-    categoryLabel: "Travel & Hospitality",
+    categoryLabel: "Travel",
   },
 
   // Food

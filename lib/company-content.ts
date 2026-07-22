@@ -40,7 +40,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
   "car-rentals": {
     slug: "car-rentals",
     intro:
-      "Niiplants and Car Rentals puts a professionally maintained fleet at your disposal — by the day, the week, or the month. From airport pickups to ongoing corporate transportation, every vehicle is serviced in-house and every booking is handled by people who run fleets for a living.",
+      "Niiplants and Car Rentals puts a professionally maintained fleet at your disposal — by the day, the week, or the month. From airport pickups to ongoing corporate transportation, every vehicle is professionally maintained and every booking is handled by people who run fleets for a living.",
     servicesLabel: "Services",
     services: [
       "Daily rentals",
@@ -147,9 +147,9 @@ export const companyDetails: Record<string, CompanyDetail> = {
         caption: "Long-term leases, handled end to end.",
       },
       {
-        src: "/photos/automotive-workshop.jpg",
-        alt: "Technician servicing a fleet vehicle in the workshop",
-        caption: "Maintenance support included with every lease.",
+        src: "/photos/office-work.jpg",
+        alt: "Lease agreement being reviewed at a desk",
+        caption: "Corporate fleets, managed end to end.",
       },
     ],
     ctaLabel: "Visit Plants Greene Leasing",
@@ -158,7 +158,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
   logistics: {
     slug: "logistics",
     intro:
-      "Niiplants Logistics moves goods reliably across Ghana — from same-city deliveries to nationwide distribution. Corporate clients get a single accountable partner for transport, warehousing, and distribution, running on a fleet the group maintains itself.",
+      "Niiplants Logistics moves goods reliably across Ghana — from same-city deliveries to nationwide distribution. Corporate clients get a single accountable partner for transport, warehousing, and distribution, running on a professionally maintained fleet.",
     servicesLabel: "Services",
     services: [
       "Local delivery",

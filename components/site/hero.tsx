@@ -38,7 +38,7 @@ const SLIDE_MS = 6000;
 
 /** Client-brief figures — see docs/04-content.md. */
 const stats: Array<{ value?: number; suffix?: string; static?: string; label: string }> = [
-  { value: 8, suffix: "+", label: "Companies" },
+  { value: 6, label: "Companies" },
   { value: 1000, suffix: "+", label: "Customers served" },
   { static: "24/7", label: "Support" },
   { static: "Nationwide", label: "Operations" },
