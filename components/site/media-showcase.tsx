@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/site/container";
 import { Reveal } from "@/components/site/reveal";
 import { LiteYouTube } from "@/components/site/lite-youtube";
-import { RouteNetworkArt } from "@/components/site/brand-art";
+import { VideoPlayer } from "@/components/site/video-player";
 
 /** Uploads playlist of the Nii Plants Car Rentals YouTube channel. */
 export const NIIPLANTS_UPLOADS_PLAYLIST = "UUgqE5Gwju32f7Quf6P0-DFg";
@@ -21,32 +21,37 @@ export function MediaShowcase() {
             See our companies at work.
           </h2>
           <p className="mt-4 text-body-lg text-ink-500">
-            Real vehicles, real journeys, real service — straight from the
-            Nii Plants Car Rentals channel.
+            Real vehicles, real journeys, real service — from our fleet
+            expansion to the teams who keep it running.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div className="mt-14 grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
+          {/* Feature film — self-hosted group video. */}
           <Reveal className="lg:col-span-7">
+            <VideoPlayer
+              src="/video/fleet-story.mp4"
+              poster="/video/fleet-story-poster.jpg"
+              title="Growing the Nii Plants fleet"
+              caption="Our team at the handover of new coaster buses — investing in the fleet that moves our clients every day."
+            />
+          </Reveal>
+
+          {/* Channel */}
+          <Reveal delay={0.1} className="lg:col-span-5">
             <LiteYouTube
               playlistId={NIIPLANTS_UPLOADS_PLAYLIST}
               title="Nii Plants Car Rentals — latest from the fleet"
             />
-          </Reveal>
-
-          <Reveal delay={0.1} className="lg:col-span-5">
-            <div className="relative">
-              <RouteNetworkArt mode="light" className="mx-auto max-w-sm" />
-            </div>
-            <p className="mt-6 text-ink-500">
-              From Accra outward — our fleets, residences, and logistics
-              network keep people and goods moving across Ghana every day.
+            <p className="mt-5 text-ink-500">
+              More from the road: vehicle walkarounds, client journeys, and
+              updates from across the group.
             </p>
             <a
               href="https://www.youtube.com/@niiplantscarrental867"
               target="_blank"
               rel="noopener"
-              className="link-underline mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent-700"
+              className="link-underline mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent-700"
             >
               Visit our YouTube channel
               <ArrowUpRight className="size-4" aria-hidden="true" />
