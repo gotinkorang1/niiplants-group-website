@@ -20,12 +20,12 @@ export function MediaShowcase() {
         />
 
         <div className="mt-14 grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
-          {/* Feature film — self-hosted group video. */}
+          {/* Feature film — self-hosted group video (metadata in lib/videos.ts). */}
           <Reveal className="lg:col-span-7">
             <VideoPlayer
               src="/video/fleet-story.mp4"
               poster="/video/fleet-story-poster.jpg"
-              title="Growing the Nii Plants fleet"
+              title="Growing the Nii Plants fleet — new coaster buses"
               caption="Our team at the handover of new coaster buses — investing in the fleet that moves our clients every day."
             />
           </Reveal>

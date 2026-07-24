@@ -8,10 +8,17 @@ import { MediaShowcase } from "@/components/site/media-showcase";
 import { Clients } from "@/components/site/clients";
 import { NewsTeaser } from "@/components/site/news/news-teaser";
 import { CtaBand } from "@/components/site/cta-band";
+import { videosForPage, videoJsonLd } from "@/lib/videos";
 
 export default function Home() {
+  const videoLd = videosForPage("/").map(videoJsonLd);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }}
+      />
       <Hero />
       <LogoStrip />
       <SectorShowcase />
