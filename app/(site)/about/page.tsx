@@ -11,11 +11,12 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { CtaBand } from "@/components/site/cta-band";
 import { companyGroups, companiesByGroup } from "@/lib/companies";
+import { managementTeam } from "@/lib/leadership";
 
 export const metadata: Metadata = {
   title: "About the Group",
   description:
-    "Nii Plants Group is a diversified Ghanaian business group — six companies across mobility, travel, and business services, one standard of reliability.",
+    "Nii Plants Group is a diversified Ghanaian business group — eight companies across mobility, hospitality, travel, and business services, united by one standard of reliability.",
   alternates: { canonical: "/about" },
 };
 
@@ -49,13 +50,6 @@ const values = [
 ];
 
 /** Top management — names and roles per client-supplied photo files. */
-const leadership = [
-  { src: "/management/theo-ayitey-adjin.jpg", name: "Theo Ayitey-Adjin", role: "Chief Executive Officer" },
-  { src: "/management/emmanuel-nelson.jpg", name: "Emmanuel Nelson", role: "Operations Manager" },
-  { src: "/management/daniel-awotwe-pratt.jpg", name: "Daniel Awotwe-Pratt", role: "Finance Manager" },
-  { src: "/management/kingdom-kededor-avisseh.jpg", name: "Kingdom Kededor Avisseh", role: "Executive Assistant" },
-];
-
 const awards = [
   {
     src: "/awards/ceo-receiving-award.jpg",
@@ -83,7 +77,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About the Group"
         title="Built in Ghana. Built to be depended on."
-        lede="Founded in Ghana, Nii Plants Group has grown into a diversified group of six companies delivering reliable services across mobility, travel, and business services — for individuals, corporations, and government institutions."
+        lede="Founded in Ghana, Nii Plants Group has grown into a diversified group of eight companies delivering reliable services across mobility, hospitality, travel, and business services — for individuals, corporations, and government institutions."
       />
 
       {/* Story */}
@@ -107,7 +101,7 @@ export default function AboutPage() {
             <p>
               That is why the portfolio holds together: rentals feed leasing,
               logistics keeps goods moving, and travel connects the journeys in
-              between. Six specialist companies, one standard of reliability.
+              between. Eight specialist companies, one standard of reliability.
             </p>
             <p>
               Today the group serves individuals, corporations, and government
@@ -165,36 +159,48 @@ export default function AboutPage() {
         src="/photos/logistics-truck-port.jpg"
         alt="Freight truck at a container port at sunset"
         eyebrow="Our reach"
-        title="Six companies. One operating standard."
+        title="Eight companies. One operating standard."
         body="From vehicles and freight to residences and supplies, every Nii Plants company is run to the same standard of reliability."
         cta={{ href: "/companies", label: "Explore our companies" }}
       />
 
-      {/* Leadership */}
+      {/* Management team */}
       <section className="border-y border-line-200 bg-paper-50 py-20 md:py-28">
         <Container>
           <Reveal className="max-w-2xl">
-            <p className="text-label uppercase tracking-wide text-accent-700 mb-4">Leadership</p>
+            <p className="text-label uppercase tracking-wide text-accent-700 mb-4">Management team</p>
             <h2 className="text-h2 font-display text-ink-900 text-balance">
               The people accountable for the standard.
             </h2>
           </Reveal>
           <ul className="mt-14 grid grid-cols-2 gap-6 lg:grid-cols-4">
-            {leadership.map((person, index) => (
+            {managementTeam.map((person, index) => (
               <li key={person.name}>
                 <Reveal delay={index * 0.07} className="card-lift group h-full overflow-hidden rounded-md border border-line-200 bg-paper-0">
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <Image
-                      src={person.src}
-                      alt={`${person.name}, ${person.role}, Nii Plants Group`}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                    />
+                  <div className="relative aspect-[3/4] overflow-hidden bg-ink-900">
+                    {person.image ? (
+                      <Image
+                        src={person.image}
+                        alt={`${person.name}, ${person.role}, Nii Plants Group`}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, 50vw"
+                        className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-ink-900 via-ink-700 to-accent-700 text-paper-0" role="img" aria-label={`Portrait placeholder for ${person.name}`}>
+                        <span className="font-display text-6xl font-semibold tracking-tight text-paper-0/90">{person.initials}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-5">
                     <p className="font-medium text-ink-900">{person.name}</p>
                     <p className="mt-1 text-sm text-ink-500">{person.role}</p>
+                    <details className="mt-5 border-t border-line-200 pt-4">
+                      <summary className="cursor-pointer text-sm font-medium text-accent-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-700">Read profile</summary>
+                      <div className="mt-4 space-y-3 text-sm leading-6 text-ink-500">
+                        {person.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                      </div>
+                    </details>
                   </div>
                 </Reveal>
               </li>
@@ -263,7 +269,7 @@ export default function AboutPage() {
               How the group is organised
             </p>
             <h2 className="text-h2 font-display text-ink-900 text-balance">
-              Three clusters, six companies.
+              Three clusters, eight companies.
             </h2>
             <p className="mt-4 text-body-lg text-ink-500">
               Our companies are organised by how they work together — not as a
