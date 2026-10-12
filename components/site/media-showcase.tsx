@@ -25,8 +25,8 @@ export function MediaShowcase() {
             <VideoPlayer
               src="/video/fleet-story.mp4"
               poster="/video/fleet-story-poster.jpg"
-              title="Growing the Nii Plants fleet — new coaster buses"
-              caption="Our team at the handover of new coaster buses — investing in the fleet that moves our clients every day."
+              title="Growing the Nii Plants fleet — a 45-seater luxury bus"
+              caption="Our team at the handover of a new 45-seater luxury bus — investing in the fleet that moves our clients every day."
             />
           </Reveal>
 

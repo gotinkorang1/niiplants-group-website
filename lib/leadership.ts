@@ -1,13 +1,36 @@
 export type ManagementProfile = {
+  slug: string;
   name: string;
   role: string;
   initials: string;
   image?: string;
   bio: string[];
+  credentials?: string[];
 };
 
 export const managementTeam: ManagementProfile[] = [
   {
+    slug: "theophilus-ayitey-adjin",
+    name: "Theophilus Ayitey-Adjin",
+    role: "Chief Executive Officer and Founder",
+    initials: "TA",
+    image: "/management/theo-ayitey-adjin.jpg",
+    bio: [
+      "Theophilus Ayitey-Adjin is the Chief Executive Officer and Founder of Niiplants Logistics Limited, a privately owned company focused on trucking and haulage, vehicle rentals, and courier services.",
+      "He founded Nii Plants Car Rentals in 2009 with a single 4×4 pickup while working as Works Manager at Dredging International. At Dredging International, he also served as Project Manager, planning site works and overseeing the movement of heavy-duty equipment and the haulage of civil engineering materials, before resigning in 2010 to focus on the business full time.",
+      "A civil engineer and lecturer, Theo taught Transportation Engineering and Engineering Survey at the Department of Civil Engineering, Koforidua Technical University, for over eight years. His expertise continues to inform how the Group plans routes, loads, and fleet operations.",
+      "Theo also serves through Rotary. He was President of the Rotary Club of Accra during the 2021–2022 Rotary year, the first Rotary Club in Ghana.",
+    ],
+    credentials: [
+      "MSc, Coastal Geoscience and Engineering — Kiel University, Germany",
+      "BSc, Geodetic Engineering — KNUST, Ghana",
+      "Lecturer, Department of Civil Engineering — Koforidua Technical University, 8+ years",
+      "Project Manager — Dredging International, until 2010",
+      "President, Rotary Club of Accra — 2021–2022",
+    ],
+  },
+  {
+    slug: "frank-adjei",
     name: "Frank Adjei",
     role: "Fleet Manager",
     initials: "FA",
@@ -18,6 +41,7 @@ export const managementTeam: ManagementProfile[] = [
     ],
   },
   {
+    slug: "kingdom-kededor-avisseh",
     name: "Kingdom Kededor Avisseh",
     role: "Executive Assistant / General Manager, Trivoxo",
     initials: "KA",
@@ -29,6 +53,7 @@ export const managementTeam: ManagementProfile[] = [
     ],
   },
   {
+    slug: "wilhemina-adoma-opoku",
     name: "Wilhemina Adoma Opoku",
     role: "Human Resource and Admin Manager",
     initials: "WA",
@@ -39,6 +64,7 @@ export const managementTeam: ManagementProfile[] = [
     ],
   },
   {
+    slug: "daniel-awotwe-pratt",
     name: "Daniel Awotwe-Pratt",
     role: "General Manager, Nii Plants and Car Rentals",
     initials: "DA",

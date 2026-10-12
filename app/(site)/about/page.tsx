@@ -175,7 +175,7 @@ export default function AboutPage() {
           </Reveal>
           <ul className="mt-14 grid grid-cols-2 gap-6 lg:grid-cols-4">
             {managementTeam.map((person, index) => (
-              <li key={person.name}>
+              <li key={person.slug} id={`manager-${person.slug}`} className="scroll-mt-28">
                 <Reveal delay={index * 0.07} className="card-lift group h-full overflow-hidden rounded-md border border-line-200 bg-paper-0">
                   <div className="relative aspect-[3/4] overflow-hidden bg-ink-900">
                     {person.image ? (
@@ -199,6 +199,15 @@ export default function AboutPage() {
                       <summary className="cursor-pointer text-sm font-medium text-accent-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-700">Read profile</summary>
                       <div className="mt-4 space-y-3 text-sm leading-6 text-ink-500">
                         {person.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                        {person.credentials && (
+                          <ul className="mt-5 space-y-2 border-t border-line-200 pt-4 text-ink-700">
+                            {person.credentials.map((credential) => (
+                              <li key={credential} className="relative pl-4 before:absolute before:left-0 before:top-2.5 before:size-1.5 before:rounded-full before:bg-accent-500">
+                                {credential}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     </details>
                   </div>

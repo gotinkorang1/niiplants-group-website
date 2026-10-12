@@ -28,9 +28,9 @@ export interface SiteVideo {
 export const siteVideos: SiteVideo[] = [
   {
     id: "growing-the-nii-plants-fleet",
-    name: "Growing the Nii Plants fleet",
+    name: "Growing the Nii Plants fleet — a 45-seater luxury bus",
     description:
-      "Behind the scenes as Nii Plants Group takes delivery of new coaster buses — investing in the fleet that moves clients across Ghana every day, with the team at the dealership handover.",
+      "Behind the scenes as Nii Plants Group takes delivery of a 45-seater luxury bus — investing in the fleet that moves clients across Ghana every day, with the team at the dealership handover.",
     pagePath: "/",
     thumbnail: "/video/fleet-story-poster.jpg",
     uploadDate: "2026-07-21",
