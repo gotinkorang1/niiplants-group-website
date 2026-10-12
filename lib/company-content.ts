@@ -329,8 +329,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Laundry service",
     ],
     highlights: [
-      "Two one-bedroom apartments",
-      "Two additional one-bedroom apartments",
+      "Four apartment units",
       "One standard room",
     ],
     location: "Dansoman Poultry Farm Avenue, Accra, Ghana",
