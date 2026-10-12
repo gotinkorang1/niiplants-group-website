@@ -23,7 +23,10 @@ export function Reveal({
       // legitimately differs between server and first client paint. Harmless —
       // see https://github.com/framer/motion/issues/2312.
       suppressHydrationWarning
-      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 16 }}
+      // Keep content visible while the observer/hydration settles. A hidden
+      // initial state can leave the whole page blank if motion is interrupted
+      // by a slow client boot or a browser restoring a scrolled position.
+      initial={shouldReduceMotion ? undefined : { opacity: 1, y: 16 }}
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1], delay }}

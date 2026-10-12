@@ -63,13 +63,15 @@ export function Hero() {
   const slide = slides[index];
 
   const line = (delay: number) => ({
-    initial: { y: "110%" },
+    // The hero must remain readable even if the entrance animation is
+    // interrupted before Framer Motion can run its first frame.
+    initial: { y: 0 },
     animate: { y: 0 },
     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const, delay },
   });
 
   const fade = (delay: number) => ({
-    initial: { opacity: 0, y: 16 },
+    initial: { opacity: 1, y: 16 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const, delay },
   });
@@ -82,7 +84,7 @@ export function Hero() {
           <AnimatePresence initial={false}>
             <motion.div
               key={slide.src}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
