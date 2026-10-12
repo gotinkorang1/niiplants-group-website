@@ -39,7 +39,7 @@ export function CompanyCard({
             src={image.src}
             alt=""
             fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 90vw"
+            sizes="(min-width: 1024px) 384px, (min-width: 640px) 45vw, 370px"
             className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
           />
         ) : (

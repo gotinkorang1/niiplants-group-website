@@ -38,7 +38,6 @@ export function VideoPlayer({
       <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-line-200 bg-ink-900 shadow-floating">
         <video
           ref={ref}
-          poster={poster}
           controls={playing}
           preload="none"
           playsInline
