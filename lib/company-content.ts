@@ -313,6 +313,30 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ctaLabel: "Visit Trivoxo",
     crossLinks: ["travel", "car-rentals"],
   },
+  residences: {
+    slug: "residences",
+    intro:
+      "Plantsville Residences is a serviced-apartment property inside Dansoman Poultry Farm Avenue in Accra, Ghana. It offers a small, comfortable base for guests who want the privacy of an apartment with the practical support of a managed residence.",
+    servicesLabel: "Facilities",
+    services: [
+      "Five serviced apartments",
+      "24-hour security",
+      "Constant power supply",
+      "Clean, uninterrupted water",
+      "Free Wi-Fi",
+      "Air-conditioning in every room",
+      "Free parking",
+      "Laundry service",
+    ],
+    highlights: [
+      "Two one-bedroom apartments",
+      "Two additional one-bedroom apartments",
+      "One standard room",
+    ],
+    location: "Dansoman Poultry Farm Avenue, Accra, Ghana",
+    ctaLabel: "Enquire about a stay",
+    crossLinks: ["travel", "car-rentals"],
+  },
   food: {
     slug: "food",
     intro:
@@ -358,6 +382,20 @@ export const companyDetails: Record<string, CompanyDetail> = {
     ],
     ctaLabel: "Visit Puffs Ghana",
     crossLinks: ["travel", "car-rentals"],
+  },
+  automobile: {
+    slug: "automobile",
+    intro:
+      "NPL Automobile supports dependable mobility through vehicle repair and maintenance. Its automotive service capability complements the group's rental, leasing, and logistics operations by helping keep vehicles safe, available, and road-ready.",
+    servicesLabel: "Services",
+    services: ["Vehicle repair", "Vehicle maintenance", "Fleet support"],
+    highlights: [
+      "Automotive repair and maintenance support",
+      "Supports the wider group's vehicle operations",
+      "Focused on vehicle availability and road readiness",
+    ],
+    ctaLabel: "Enquire about automotive services",
+    crossLinks: ["car-rentals", "vehicle-leasing", "logistics"],
   },
   "office-supplies": {
     slug: "office-supplies",

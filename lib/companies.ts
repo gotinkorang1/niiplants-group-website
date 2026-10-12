@@ -56,6 +56,15 @@ export const companies: Company[] = [
     logo: "/logo/niiplants-logistics.png",
   },
   {
+    slug: "automobile",
+    name: "NPL Automobile",
+    sector: "Automotive",
+    group: "mobility",
+    descriptor: "Vehicle repair and maintenance services that keep cars and commercial fleets road-ready.",
+    pageType: "internal",
+    tint: "logistics",
+  },
+  {
     slug: "travel",
     name: "Trivoxo Limited Company",
     sector: "Travel",
@@ -65,6 +74,15 @@ export const companies: Company[] = [
     externalUrl: "https://trivoxogh.com",
     tint: "travel",
     logo: "/logo/trivoxo.png",
+  },
+  {
+    slug: "residences",
+    name: "Plantsville Residences",
+    sector: "Hospitality",
+    group: "hospitality-travel",
+    descriptor: "Serviced apartments in Dansoman, Accra, with reliable comfort for short and extended stays.",
+    pageType: "internal",
+    tint: "travel",
   },
   {
     slug: "food",

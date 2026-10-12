@@ -47,7 +47,7 @@ export function Footer() {
           <Wordmark stacked className="max-w-[13rem] text-paper-0" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper-0/70">
             A diversified Ghanaian business group in mobility, travel,
-            and business services — six companies, one standard of
+            and business services — eight companies, one standard of
             reliability.
           </p>
           <ul className="mt-6 flex flex-col gap-3 text-sm text-paper-0/70">

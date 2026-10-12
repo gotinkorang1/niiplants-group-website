@@ -149,9 +149,9 @@ export function Hero() {
             suppressHydrationWarning
             className="mt-7 max-w-xl text-body-lg text-paper-0/80"
           >
-            Six companies across transportation, logistics, travel,
-            food, leasing and office supplies — held to one standard
-            of reliability.
+            Eight companies across mobility, logistics, hospitality, travel,
+            food, automotive, leasing and office supplies — held to one
+            standard of reliability.
           </motion.p>
 
           <motion.div

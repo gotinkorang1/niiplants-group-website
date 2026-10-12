@@ -48,7 +48,7 @@ export default function CompaniesPage() {
       />
       <PageHero
         eyebrow="Our companies"
-        title="One group, six specialist businesses."
+        title="One group, eight specialist businesses."
         lede="Our portfolio is built on natural adjacency — rentals feed leasing, logistics keeps goods moving, and every company holds the same group standard of reliability."
       >
         {/* Cluster jump-links */}

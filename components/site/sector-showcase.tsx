@@ -10,7 +10,7 @@ export function SectorShowcase() {
       <Container>
         <SectionHeading
           eyebrow="Our companies"
-          title="One group, six specialist businesses."
+          title="One group, eight specialist businesses."
           lede="Our companies work together naturally — rentals feed leasing, logistics keeps goods moving, and travel connects the journeys between."
         />
 

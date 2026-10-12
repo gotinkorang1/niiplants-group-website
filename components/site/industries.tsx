@@ -5,6 +5,8 @@ import {
   Plane,
   Truck,
   UtensilsCrossed,
+  Building2,
+  Wrench,
 } from "lucide-react";
 
 import { Container } from "@/components/site/container";
@@ -18,13 +20,15 @@ const industries = [
   { icon: UtensilsCrossed, label: "Food", tint: "food" },
   { icon: KeyRound, label: "Leasing", tint: "leasing" },
   { icon: Package, label: "Procurement", tint: "office" },
+  { icon: Building2, label: "Hospitality", tint: "travel" },
+  { icon: Wrench, label: "Automotive", tint: "logistics" },
 ];
 
 export function Industries() {
   return (
     <section className="border-y border-line-200 bg-paper-50 py-24 md:py-32">
       <Container>
-        <SectionHeading eyebrow="Industries we serve" title="Six sectors, one accountable partner." />
+        <SectionHeading eyebrow="Industries we serve" title="Eight capabilities, one accountable partner." />
 
         <ul className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {industries.map((industry, index) => (

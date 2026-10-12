@@ -24,7 +24,7 @@ export const siteUrl = resolveSiteUrl();
 export const siteName = "Nii Plants Group";
 
 export const siteDescription =
-  "Nii Plants Group is a diversified Ghanaian business group — six companies across car rentals, vehicle leasing, logistics, travel, food, and office supplies.";
+  "Nii Plants Group is a diversified Ghanaian business group across mobility, logistics, hospitality, travel, food, automotive, leasing, and office supplies.";
 
 /**
  * WhatsApp number in international format, no "+" or spaces.

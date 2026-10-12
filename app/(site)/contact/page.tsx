@@ -15,7 +15,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Nii Plants Group or reach any of its six companies directly — car rentals, leasing, logistics, travel, food, and office supplies.",
+    "Contact Nii Plants Group or reach any of its eight companies directly across mobility, logistics, hospitality, travel, food, automotive, leasing, and office supplies.",
   alternates: { canonical: "/contact" },
 };
 
