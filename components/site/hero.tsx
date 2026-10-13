@@ -9,6 +9,7 @@ import { Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
 import { CountUp } from "@/components/site/count-up";
+import { companies } from "@/lib/companies";
 
 /** Full-bleed cinematic slides — the group's breadth, in four frames. */
 const slides = [
@@ -38,7 +39,7 @@ const SLIDE_MS = 6000;
 
 /** Client-brief figures — see docs/04-content.md. */
 const stats: Array<{ value?: number; suffix?: string; static?: string; label: string }> = [
-  { value: 6, label: "Companies" },
+  { value: companies.length, label: "Companies" },
   { value: 1000, suffix: "+", label: "Customers served" },
   { static: "24/7", label: "Support" },
   { static: "Nationwide", label: "Operations" },

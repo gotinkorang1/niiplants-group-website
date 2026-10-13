@@ -319,7 +319,7 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Plantsville Residences is a serviced-apartment property inside Dansoman Poultry Farm Avenue in Accra, Ghana. It offers a small, comfortable base for guests who want the privacy of an apartment with the practical support of a managed residence.",
     servicesLabel: "Facilities",
     services: [
-      "Five serviced apartments",
+      "Five serviced units",
       "24-hour security",
       "Constant power supply",
       "Clean, uninterrupted water",
@@ -329,8 +329,9 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Laundry service",
     ],
     highlights: [
-      "Four apartment units",
-      "One standard room",
+      "Four apartment units and one standard room",
+      "24-hour security, constant power, and uninterrupted water",
+      "Airport pickup and vehicle hire through Nii Plants and Car Rentals",
     ],
     location: "Dansoman Poultry Farm Avenue, Accra, Ghana",
     ctaLabel: "Enquire about a stay",
@@ -392,6 +393,17 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Automotive repair and maintenance support",
       "Supports the wider group's vehicle operations",
       "Focused on vehicle availability and road readiness",
+    ],
+    heroImage: {
+      src: "/photos/automotive-repair.jpg",
+      alt: "Technician inspecting a car engine in a service workshop",
+    },
+    gallery: [
+      {
+        src: "/photos/automotive-workshop.jpg",
+        alt: "Automotive technician standing in a workshop with a car on a lift",
+        caption: "Repair and maintenance that keeps vehicles road-ready.",
+      },
     ],
     ctaLabel: "Enquire about automotive services",
     crossLinks: ["car-rentals", "vehicle-leasing", "logistics"],
