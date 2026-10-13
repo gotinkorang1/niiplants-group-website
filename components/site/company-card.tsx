@@ -6,6 +6,15 @@ import { cn } from "@/lib/utils";
 import type { Company } from "@/lib/companies";
 import { companyDetails } from "@/lib/company-content";
 
+/** "Plantsville Residences" → "PR". */
+function monogram(name: string) {
+  return name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("");
+}
+
 /**
  * Company card — photographic header with the company logo floated over it,
  * sector tint, and an arrow affordance. One component shared by the
@@ -43,7 +52,18 @@ export function CompanyCard({
             className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-ink-900 to-ink-700" />
+          // No photography yet: a branded plate lit by the sector tint, never an empty box.
+          <div className="absolute inset-0 bg-ink-900 bg-grid-dark" aria-hidden="true">
+            <div
+              className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80"
+              style={{
+                background: `radial-gradient(110% 90% at 85% 10%, color-mix(in srgb, var(--color-sector-${company.tint}) 75%, transparent), transparent 70%)`,
+              }}
+            />
+            <span className="absolute right-6 top-4 font-display text-[5.5rem] leading-none text-paper-0/25 transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]">
+              {monogram(company.name)}
+            </span>
+          </div>
         )}
         <div
           className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-ink-900/10 to-transparent"

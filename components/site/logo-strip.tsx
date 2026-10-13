@@ -2,19 +2,17 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/site/reveal";
 import { Container } from "@/components/site/container";
+import { companies } from "@/lib/companies";
 
 /**
- * Real subsidiary logos from public/logo — static grid, grayscale by
- * default, color on hover (docs/06-components.md: no auto-scrolling
- * marquee). Papersource's logo is still pending from the client.
+ * Real subsidiary logos, taken from the companies list so new logos appear
+ * here automatically — static grid, grayscale by default, color on hover
+ * (docs/06-components.md: no auto-scrolling marquee). Papersource's logo is
+ * still pending from the client.
  */
-const logos = [
-  { src: "/logo/niiplants-car-rentals.png", alt: "Nii Plants and Car Rentals" },
-  { src: "/logo/niiplants-logistics.png", alt: "Nii Plants Logistics" },
-  { src: "/logo/plants-greene.png", alt: "Plants Greene Leasing" },
-  { src: "/logo/trivoxo.png", alt: "Trivoxo Limited Company" },
-  { src: "/logo/puffs-ghana.png", alt: "Puffs Ghana" },
-];
+const logos = companies.flatMap((company) =>
+  company.logo ? [{ src: company.logo, alt: company.name }] : [],
+);
 
 export function LogoStrip() {
   return (
