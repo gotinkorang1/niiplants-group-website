@@ -17,7 +17,7 @@ export const managementTeam: ManagementProfile[] = [
     name: "Theophilus Ayitey-Adjin",
     role: "Chief Executive Officer and Founder",
     initials: "TA",
-    image: "/management/theo-ayitey-adjin.jpg",
+    image: "/management/theo-ayitey-adjin-2026.jpg",
     featured: true,
     bio: [
       "Theophilus Ayitey-Adjin is the Chief Executive Officer and Founder of Niiplants Logistics Limited, a privately owned company focused on trucking and haulage, vehicle rentals, and courier services.",
@@ -54,7 +54,7 @@ export const managementTeam: ManagementProfile[] = [
     name: "Kingdom Kededor Avisseh",
     role: "General Manager, Trivoxo and Executive Assistant",
     initials: "KA",
-    image: "/management/kingdom-kededor-avisseh.jpg",
+    image: "/management/kingdom-kededor-avisseh-2026.jpg",
     bio: [
       "Kingdom Kededor Avisseh is a logistics and supply chain professional with experience spanning transportation, travel, events management, and youth leadership.",
       "At Nii Plants Group, he contributes to business growth, client engagement, strategic partnerships, and operational excellence within Ghana's transport and travel industry. He also serves as General Manager for Trivoxo, the Group's travel, tour, and ticketing company.",
