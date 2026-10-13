@@ -334,6 +334,10 @@ export const companyDetails: Record<string, CompanyDetail> = {
       "Airport pickup and vehicle hire through Nii Plants and Car Rentals",
     ],
     location: "Dansoman Poultry Farm Avenue, Accra, Ghana",
+    heroImage: {
+      src: "/photos/residences-rooftop-lounge.jpg",
+      alt: "Aerial view of the rooftop lounge terrace at Plantsville Residences, with guests seated around a table",
+    },
     ctaLabel: "Enquire about a stay",
     crossLinks: ["travel", "car-rentals"],
   },
