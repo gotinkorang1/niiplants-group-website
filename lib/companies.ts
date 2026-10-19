@@ -62,7 +62,8 @@ export const companies: Company[] = [
     group: "mobility",
     descriptor: "Vehicle repair and maintenance services that keep cars and commercial fleets road-ready.",
     pageType: "internal",
-    tint: "logistics",
+    tint: "automotive",
+    logo: "/logo/npl-automobile.png",
   },
   {
     slug: "travel",
@@ -82,7 +83,8 @@ export const companies: Company[] = [
     group: "hospitality-travel",
     descriptor: "Serviced apartments in Dansoman, Accra, with reliable comfort for short and extended stays.",
     pageType: "internal",
-    tint: "travel",
+    tint: "hospitality",
+    logo: "/logo/plantsville-residences.png",
   },
   {
     slug: "food",

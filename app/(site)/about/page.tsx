@@ -10,8 +10,10 @@ import { ImageBand } from "@/components/site/image-band";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { CtaBand } from "@/components/site/cta-band";
+import { ManagementTeam } from "@/components/site/management-team";
 import { companyGroups, companiesByGroup } from "@/lib/companies";
 import { managementTeam } from "@/lib/leadership";
+import { siteName, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About the Group",
@@ -49,7 +51,6 @@ const values = [
   },
 ];
 
-/** Top management — names and roles per client-supplied photo files. */
 const awards = [
   {
     src: "/awards/ceo-receiving-award.jpg",
@@ -71,9 +72,25 @@ const awards = [
   },
 ];
 
+/** Person schema for the management team — helps search engines connect names to the group. */
+const managementJsonLd = managementTeam.map((person) => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: person.name,
+  jobTitle: person.role,
+  description: person.bio[0],
+  url: `${siteUrl}/about#manager-${person.slug}`,
+  ...(person.image ? { image: `${siteUrl}${person.image}` } : {}),
+  worksFor: { "@type": "Organization", name: siteName, url: siteUrl },
+}));
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(managementJsonLd) }}
+      />
       <PageHero
         eyebrow="About the Group"
         title="Built in Ghana. Built to be depended on."
@@ -173,48 +190,7 @@ export default function AboutPage() {
               The people accountable for the standard.
             </h2>
           </Reveal>
-          <ul className="mt-14 grid grid-cols-2 gap-6 lg:grid-cols-4">
-            {managementTeam.map((person, index) => (
-              <li key={person.slug} id={`manager-${person.slug}`} className="scroll-mt-28">
-                <Reveal delay={index * 0.07} className="card-lift group h-full overflow-hidden rounded-md border border-line-200 bg-paper-0">
-                  <div className="relative aspect-[3/4] overflow-hidden bg-ink-900">
-                    {person.image ? (
-                      <Image
-                        src={person.image}
-                        alt={`${person.name}, ${person.role}, Nii Plants Group`}
-                        fill
-                        sizes="(min-width: 1024px) 25vw, 50vw"
-                        className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                      />
-                    ) : (
-                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-ink-900 via-ink-700 to-accent-700 text-paper-0" role="img" aria-label={`Portrait placeholder for ${person.name}`}>
-                        <span className="font-display text-6xl font-semibold tracking-tight text-paper-0/90">{person.initials}</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-5">
-                    <p className="font-medium text-ink-900">{person.name}</p>
-                    <p className="mt-1 text-sm text-ink-500">{person.role}</p>
-                    <details className="mt-5 border-t border-line-200 pt-4">
-                      <summary className="cursor-pointer text-sm font-medium text-accent-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-700">Read profile</summary>
-                      <div className="mt-4 space-y-3 text-sm leading-6 text-ink-500">
-                        {person.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                        {person.credentials && (
-                          <ul className="mt-5 space-y-2 border-t border-line-200 pt-4 text-ink-700">
-                            {person.credentials.map((credential) => (
-                              <li key={credential} className="relative pl-4 before:absolute before:left-0 before:top-2.5 before:size-1.5 before:rounded-full before:bg-accent-500">
-                                {credential}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    </details>
-                  </div>
-                </Reveal>
-              </li>
-            ))}
-          </ul>
+          <ManagementTeam />
         </Container>
       </section>
 

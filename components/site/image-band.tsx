@@ -3,7 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/site/container";
@@ -33,7 +33,6 @@ export function ImageBand({
   height?: "md" | "lg";
 }) {
   const ref = React.useRef<HTMLDivElement>(null);
-  const shouldReduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -49,8 +48,9 @@ export function ImageBand({
       } flex items-center`}
     >
       <motion.div
-        style={shouldReduceMotion ? undefined : { y }}
-        className="absolute inset-x-0 -top-[8%] -bottom-[8%]"
+        style={{ y }}
+        // Reduced motion is handled in CSS so server and client render the same markup.
+        className="absolute inset-x-0 -top-[8%] -bottom-[8%] motion-reduce:transform-none!"
       >
         <Image src={src} alt={alt} fill sizes="100vw" className="object-cover" />
       </motion.div>
